@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #faf7f0;
+  --foreground: #171717;
+  --font-inter: "Inter";
+  --font-manrope: "Manrope";
+  --font-jakarta: "Plus Jakarta Sans";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+::selection {
+  background: #d98d3f;
+  color: #0b0b0a;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  content: "";
+  opacity: 0.13;
+  background-image: radial-gradient(circle at 1px 1px, rgba(12, 12, 10, 0.38) 1px, transparent 0);
+  background-size: 18px 18px;
+  mix-blend-mode: multiply;
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.magnetic-shine::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.34), transparent);
+  transform: translateX(-130%);
+  transition: transform 700ms ease;
+}
+
+.magnetic-shine:hover::before {
+  transform: translateX(130%);
+}
+
+.image-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 89% 100%, 0 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
