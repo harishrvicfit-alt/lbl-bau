@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { company } from "@/lib/company";
 
-const siteUrl = "https://bauunternehmen-waldkraiburg.de";
+const siteUrl = company.website;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

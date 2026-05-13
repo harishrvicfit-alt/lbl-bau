@@ -1,4 +1,5 @@
 import { SiteShell } from "@/components/site-shell";
+import { company } from "@/lib/company";
 import { AboutSection } from "@/sections/about";
 import { ContactSection } from "@/sections/contact";
 import { CtaSection } from "@/sections/cta";
@@ -14,21 +15,24 @@ export default function Home() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Bauunternehmen Waldkraiburg",
-    image: "https://bauunternehmen-waldkraiburg.de/images/og-cover.svg",
+    name: company.legalName,
+    image: `${company.website}/images/og-cover.svg`,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Waldkraiburg",
-      addressRegion: "Bayern",
+      streetAddress: company.street,
+      postalCode: company.postalCode,
+      addressLocality: company.city,
+      addressRegion: company.region,
       addressCountry: "DE",
     },
-    areaServed: ["Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Oberbayern"],
+    areaServed: ["Waldkraiburg", "Muehldorf am Inn", "Ampfing", "Oberbayern"],
     description:
-      "Regionaler Baupartner für Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und Hausbau.",
-    telephone: "+49 000 000000",
-    email: "kontakt@bauunternehmen-waldkraiburg.de",
+      "Regionaler Baupartner fuer Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und Hausbau.",
+    founder: company.owner,
+    telephone: company.phoneDisplay,
+    email: company.email,
     priceRange: "$$",
-    url: "https://bauunternehmen-waldkraiburg.de",
+    url: company.website,
   };
 
   return (

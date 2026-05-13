@@ -8,6 +8,7 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { company, fullAddress } from "@/lib/company";
 
 export function ContactSection() {
   const [sent, setSent] = useState(false);
@@ -34,9 +35,9 @@ export function ContactSection() {
 
           <div className="mt-10 space-y-4">
             {[
-              { icon: Phone, label: "+49 000 000000" },
-              { icon: Mail, label: "kontakt@bauunternehmen-waldkraiburg.de" },
-              { icon: MapPin, label: "Waldkraiburg, Bayern" },
+              { icon: Phone, label: company.phoneDisplay },
+              { icon: Mail, label: company.email },
+              { icon: MapPin, label: fullAddress },
             ].map((item) => (
               <div
                 key={item.label}
@@ -87,7 +88,9 @@ export function ContactSection() {
                 title="Waldkraiburg Karte"
                 loading="lazy"
                 className="h-full min-h-[390px] w-full rounded-[8px] border-0 grayscale"
-                src="https://www.google.com/maps?q=Waldkraiburg%2C%20Germany&output=embed"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(
+                  company.mapQuery,
+                )}&output=embed`}
               />
             </div>
           </div>

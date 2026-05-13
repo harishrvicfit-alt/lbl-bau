@@ -7,6 +7,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { Menu, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { company } from "@/lib/company";
 import { navItems } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -121,7 +122,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
           <div className="hidden lg:block">
             <Button variant="gold" asChild>
-              <a href="tel:+49000000000">
+              <a href={`tel:${company.phoneHref}`}>
                 <Phone className="h-4 w-4" />
                 Angebot anfragen
               </a>
@@ -157,7 +158,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </button>
             ))}
             <Button className="mt-3 w-full" variant="gold" asChild>
-              <a href="tel:+49000000000">Jetzt anrufen</a>
+              <a href={`tel:${company.phoneHref}`}>Jetzt anrufen</a>
             </Button>
           </motion.div>
         )}
