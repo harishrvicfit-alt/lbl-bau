@@ -27,7 +27,7 @@ export function AboutSection() {
             className="image-mask absolute left-0 top-0 h-[430px] w-[78%] overflow-hidden rounded-[8px] border border-white/12"
           >
             <Image
-              src="/images/about-team.svg"
+              src="/images/about-local-team.jpg"
               alt="Professionelles lokales Bauteam"
               fill
               className="object-cover"
@@ -42,7 +42,7 @@ export function AboutSection() {
             className="absolute bottom-0 right-0 h-[320px] w-[58%] overflow-hidden rounded-[8px] border border-white/12 bg-white/10 shadow-premium backdrop-blur"
           >
             <Image
-              src="/images/about-detail.svg"
+              src="/images/about-detail-construction.jpg"
               alt="Hochwertige Detailarbeit auf der Baustelle"
               fill
               className="object-cover"

@@ -19,7 +19,7 @@ export function HeroSection() {
     >
       <motion.div className="absolute inset-0" style={{ y, opacity }}>
         <Image
-          src="/images/hero-renovation.svg"
+          src="/images/hero-modern-renovation.jpg"
           alt="Moderne Renovierung und Innenausbau in Waldkraiburg"
           fill
           priority
@@ -123,7 +123,7 @@ export function HeroSection() {
         >
           <div className="image-mask relative aspect-[0.82] overflow-hidden rounded-[8px] border border-white/12 bg-white/10 shadow-premium backdrop-blur">
             <Image
-              src="/images/hero-detail.svg"
+              src="/images/hero-detail-work.jpg"
               alt="Detailarbeit bei moderner Renovierung"
               fill
               className="object-cover transition duration-700 hover:scale-105"

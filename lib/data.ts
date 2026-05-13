@@ -85,7 +85,7 @@ export const projects = [
     title: "Sanierung Einfamilienhaus",
     category: "Renovierung",
     location: "Waldkraiburg",
-    image: "/images/project-renovation.svg",
+    image: "/images/project-house-renovation.jpg",
     description:
       "Komplette Modernisierung mit neuen Oberflächen, optimierter Raumwirkung und sauberer Ausführung.",
   },
@@ -93,7 +93,7 @@ export const projects = [
     title: "Moderne Fassadengestaltung",
     category: "Fassade",
     location: "Mühldorf am Inn",
-    image: "/images/project-facade.svg",
+    image: "/images/project-modern-facade.jpg",
     description:
       "Zeitlose Fassadenarbeiten mit warmer Materialwirkung und präzisen Anschlussdetails.",
   },
@@ -101,7 +101,7 @@ export const projects = [
     title: "Innenausbau Wohnbereich",
     category: "Innenausbau",
     location: "Ampfing",
-    image: "/images/project-interior.svg",
+    image: "/images/project-interior-work.jpg",
     description:
       "Eleganter Innenausbau mit Trockenbau, Lichtlinien und hochwertigem Finish.",
   },
@@ -109,7 +109,7 @@ export const projects = [
     title: "Einfahrt & Außenanlage",
     category: "Pflaster",
     location: "Kraiburg am Inn",
-    image: "/images/project-paving.svg",
+    image: "/images/project-driveway.jpg",
     description:
       "Robuste Pflasterarbeiten mit klaren Kanten, Entwässerung und harmonischer Außenwirkung.",
   },
