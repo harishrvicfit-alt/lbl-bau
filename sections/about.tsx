@@ -59,7 +59,7 @@ export function AboutSection() {
             Lokal verwurzelt, sorgfältig geplant und hochwertig umgesetzt.
           </h2>
           <p className="mt-6 text-lg leading-8 text-white/72">
-            Wir sind eine kleinere, flexible Baufirma aus der Region Waldkraiburg.
+            LBL Bau ist eine kleinere, flexible Baufirma aus Bayern.
             Unser Anspruch ist nicht Masse, sondern saubere Arbeit, ehrliche
             Kommunikation und ein Ergebnis, das auch nach Jahren überzeugt.
           </p>

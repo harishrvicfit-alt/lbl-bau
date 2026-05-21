@@ -6,6 +6,8 @@
   color-scheme: light;
   --background: #faf7f0;
   --foreground: #171717;
+  --brand-red: #e30613;
+  --brand-red-dark: #a70009;
   --font-inter: "Inter";
   --font-manrope: "Manrope";
   --font-jakarta: "Plus Jakarta Sans";
@@ -34,8 +36,8 @@ body {
 }
 
 ::selection {
-  background: #d98d3f;
-  color: #0b0b0a;
+  background: var(--brand-red);
+  color: #ffffff;
 }
 
 body::before {

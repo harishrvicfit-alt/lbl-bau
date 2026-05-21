@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 import { company, fullAddress } from "@/lib/company";
@@ -10,8 +11,14 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-[8px] bg-sand-500 font-black text-anthracite-950">
-                BW
+              <span className="relative h-14 w-36 overflow-hidden rounded-[8px] bg-white p-2">
+                <Image
+                  src={company.logo}
+                  alt={`${company.brandName} Logo`}
+                  fill
+                  sizes="144px"
+                  className="object-contain"
+                />
               </span>
               <div>
                 <p className="font-display text-sm font-bold uppercase tracking-[0.2em]">
@@ -21,8 +28,8 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-6 max-w-md leading-7 text-white/60">
-              Moderne Bauleistungen fuer Waldkraiburg und Umgebung. Platzhaltername
-              und finale Firmendaten werden spaeter durch die echte Firma ersetzt.
+              Moderne Bauleistungen, Renovierungen und hochwertige Ausfuehrung
+              fuer private und gewerbliche Projekte in Bayern.
             </p>
           </div>
 

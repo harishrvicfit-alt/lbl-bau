@@ -1,6 +1,6 @@
-# Waldkraiburg Bau Premium
+# LBL Bau
 
-Premium Next.js landing page for a local construction company in Waldkraiburg, Germany.
+Premium Next.js landing page for LBL Bau, a modern construction and renovation company.
 
 ## Stack
 
@@ -21,11 +21,3 @@ npm run dev
 ```
 
 Then open `http://localhost:3000`.
-
-## Replace later
-
-- Company name and logo
-- Real project photos
-- Phone, email, social links
-- Google Maps address
-- Legal pages: Impressum and Datenschutz

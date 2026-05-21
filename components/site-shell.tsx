@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import gsap from "gsap";
@@ -64,9 +65,18 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               animate={{ opacity: 1, y: 0 }}
               className="text-center"
             >
-              <div className="mx-auto mb-5 h-12 w-12 rounded-[8px] border border-sand-300/40 bg-sand-500/20" />
+              <div className="relative mx-auto mb-5 h-16 w-32 overflow-hidden rounded-[8px] bg-white p-2 shadow-glow">
+                <Image
+                  src={company.logo}
+                  alt={`${company.brandName} Logo`}
+                  fill
+                  sizes="128px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
               <p className="font-display text-sm uppercase tracking-[0.34em] text-sand-100">
-                Präzision am Bau
+                LBL Bau
               </p>
             </motion.div>
           </motion.div>
@@ -96,14 +106,21 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             className="flex items-center gap-3 text-left text-white"
             aria-label="Zur Startseite"
           >
-            <span className="grid h-11 w-11 place-items-center rounded-[8px] bg-sand-500 text-lg font-black text-anthracite-950">
-              BW
+            <span className="relative h-12 w-24 overflow-hidden rounded-[8px] border border-white/20 bg-white p-2 shadow-[0_14px_35px_rgba(0,0,0,0.18)] sm:w-32">
+              <Image
+                src={company.logo}
+                alt={`${company.brandName} Logo`}
+                fill
+                sizes="128px"
+                className="object-contain"
+                priority
+              />
             </span>
-            <span>
+            <span className="hidden sm:block">
               <span className="block font-display text-sm font-bold uppercase tracking-[0.2em]">
-                Bauwerk
+                {company.brandName}
               </span>
-              <span className="block text-xs text-sand-100/80">Waldkraiburg</span>
+              <span className="block text-xs text-sand-100/80">Bau & Renovierung</span>
             </span>
           </button>
 
@@ -115,7 +132,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 className="group relative text-sm font-medium text-white/80 transition hover:text-white"
               >
                 {item.label}
-                <span className="absolute -bottom-2 left-0 h-px w-0 bg-sand-400 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-2 left-0 h-px w-0 bg-sand-500 transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </div>
@@ -168,3 +185,4 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     </>
   );
 }
+

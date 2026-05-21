@@ -85,7 +85,7 @@ export function ContactSection() {
 
             <div className="min-h-[420px] bg-anthracite-950 p-4">
               <iframe
-                title="Waldkraiburg Karte"
+                title="LBL Bau Karte"
                 loading="lazy"
                 className="h-full min-h-[390px] w-full rounded-[8px] border-0 grayscale"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(

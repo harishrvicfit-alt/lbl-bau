@@ -22,13 +22,13 @@ const config: Config = {
           950: "#0b0b0a",
         },
         sand: {
-          50: "#faf7f0",
-          100: "#f2e8d7",
-          300: "#d5b889",
-          500: "#b88643",
-          700: "#74512a",
+          50: "#fff5f5",
+          100: "#ffe3e6",
+          300: "#ff8b95",
+          500: "#e30613",
+          700: "#a70009",
         },
-        ember: "#d98d3f",
+        ember: "#e30613",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "sans-serif"],
@@ -37,7 +37,7 @@ const config: Config = {
       },
       boxShadow: {
         premium: "0 24px 80px rgba(12, 12, 10, 0.18)",
-        glow: "0 0 50px rgba(217, 141, 63, 0.22)",
+        glow: "0 0 50px rgba(227, 6, 19, 0.24)",
       },
       backgroundImage: {
         grain:

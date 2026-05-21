@@ -20,7 +20,7 @@ export function HeroSection() {
       <motion.div className="absolute inset-0" style={{ y, opacity }}>
         <Image
           src="/images/hero-modern-renovation.jpg"
-          alt="Moderne Renovierung und Innenausbau in Waldkraiburg"
+          alt="LBL Bau Renovierung und Innenausbau"
           fill
           priority
           className="object-cover"
@@ -58,7 +58,7 @@ export function HeroSection() {
             className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-sand-100 backdrop-blur-2xl"
           >
             <BadgeCheck className="h-4 w-4 text-sand-400" />
-            Regionaler Baupartner aus Waldkraiburg
+            Premium Baupartner: LBL Bau
           </motion.div>
 
           <motion.h1
@@ -67,7 +67,7 @@ export function HeroSection() {
             transition={{ duration: 0.95, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="text-balance font-display text-5xl font-black leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl"
           >
-            Qualität am Bau. Modern. Präzise. Zuverlässig.
+            LBL Bau. Modern. Präzise. Zuverlässig.
           </motion.h1>
 
           <motion.p
@@ -77,7 +77,7 @@ export function HeroSection() {
             className="mt-7 max-w-2xl text-lg leading-8 text-white/76"
           >
             Hochwertige Renovierungen, Innenausbau, Fassaden und kleinere bis
-            mittlere Bauprojekte für Waldkraiburg, Mühldorf am Inn und Oberbayern.
+            mittlere Bauprojekte mit sauberer Planung und präziser Ausführung.
           </motion.p>
 
           <motion.div
@@ -146,7 +146,7 @@ export function HeroSection() {
           <div className="absolute -right-6 top-10 rounded-[8px] border border-white/12 bg-anthracite-950/64 p-4 shadow-glow backdrop-blur-2xl">
             <div className="flex items-center gap-2 text-sm text-white/80">
               <MapPin className="h-4 w-4 text-sand-400" />
-              Waldkraiburg, Bayern
+              Bayern
             </div>
           </div>
         </motion.div>

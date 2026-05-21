@@ -25,7 +25,7 @@ export default function Home() {
       addressRegion: company.region,
       addressCountry: "DE",
     },
-    areaServed: ["Waldkraiburg", "Muehldorf am Inn", "Ampfing", "Oberbayern"],
+    areaServed: ["Bayern", "Waldkraiburg", "Muehldorf am Inn", "Ampfing"],
     description:
       "Regionaler Baupartner fuer Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und Hausbau.",
     founder: company.owner,

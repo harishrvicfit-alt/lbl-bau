@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "bg-anthracite-950 px-6 py-3 text-white shadow-premium hover:-translate-y-0.5 hover:bg-anthracite-800",
         gold:
-          "bg-sand-500 px-6 py-3 text-anthracite-950 shadow-glow hover:-translate-y-0.5 hover:bg-ember",
+          "bg-sand-500 px-6 py-3 text-white shadow-glow hover:-translate-y-0.5 hover:bg-sand-700",
         outline:
           "border border-white/25 bg-white/10 px-6 py-3 text-white backdrop-blur-xl hover:-translate-y-0.5 hover:bg-white/18",
         ghost:

@@ -8,7 +8,7 @@ import { Footer } from "@/sections/footer";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum und Kontaktangaben fuer das Bauunternehmen Waldkraiburg.",
+    "Impressum und Kontaktangaben fuer LBL Bau.",
 };
 
 export default function ImpressumPage() {
