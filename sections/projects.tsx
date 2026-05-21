@@ -105,7 +105,9 @@ export function ProjectsSection() {
                       {selected.description}
                     </Dialog.Description>
                     <Button className="mt-6" variant="default" asChild>
-                      <a href="#kontakt">Ähnliches Projekt anfragen</a>
+                      <a href="#kontakt" onClick={() => setSelected(null)}>
+                        Ähnliches Projekt anfragen
+                      </a>
                     </Button>
                   </div>
                 </motion.div>

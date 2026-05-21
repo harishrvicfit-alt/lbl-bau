@@ -11,12 +11,63 @@ import { Textarea } from "@/components/ui/textarea";
 import { company, fullAddress } from "@/lib/company";
 
 export function ContactSection() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [message, setMessage] = useState("");
 
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSent(true);
+    setStatus("sending");
+    setMessage("");
+
+    const form = event.currentTarget;
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      const result = (await response.json()) as { message?: string };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Die Anfrage konnte nicht gesendet werden.");
+      }
+
+      setStatus("sent");
+      setMessage(result.message ?? "Danke. Ihre Anfrage wurde gesendet.");
+      form.reset();
+    } catch (error) {
+      setStatus("error");
+      setMessage(
+        error instanceof Error
+          ? error.message
+          : "Die Anfrage konnte nicht gesendet werden.",
+      );
+    }
   };
+
+  const contactItems = [
+    {
+      icon: Phone,
+      label: company.phoneDisplay,
+      href: `tel:${company.phoneHref}`,
+      aria: "LBL Bau anrufen",
+    },
+    {
+      icon: Mail,
+      label: company.email,
+      href: `mailto:${company.email}`,
+      aria: "LBL Bau per E-Mail kontaktieren",
+    },
+    {
+      icon: MapPin,
+      label: fullAddress,
+      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        company.mapQuery,
+      )}`,
+      aria: "LBL Bau Adresse in Google Maps öffnen",
+      external: true,
+    },
+  ];
 
   return (
     <AnimatedSection id="kontakt" className="bg-sand-50 py-24">
@@ -34,20 +85,20 @@ export function ContactSection() {
           </p>
 
           <div className="mt-10 space-y-4">
-            {[
-              { icon: Phone, label: company.phoneDisplay },
-              { icon: Mail, label: company.email },
-              { icon: MapPin, label: fullAddress },
-            ].map((item) => (
-              <div
+            {contactItems.map((item) => (
+              <a
                 key={item.label}
-                className="flex items-center gap-4 rounded-[8px] bg-white p-4 shadow-[0_16px_45px_rgba(23,23,23,0.06)]"
+                href={item.href}
+                aria-label={item.aria}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer" : undefined}
+                className="flex items-center gap-4 rounded-[8px] bg-white p-4 shadow-[0_16px_45px_rgba(23,23,23,0.06)] outline-none transition hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(227,6,19,0.12)] focus-visible:ring-4 focus-visible:ring-sand-500/25"
               >
-                <span className="grid h-11 w-11 place-items-center rounded-[8px] bg-anthracite-950 text-sand-300">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-[8px] bg-anthracite-950 text-sand-300">
                   <item.icon className="h-5 w-5" />
                 </span>
                 <span className="font-semibold text-anthracite-800">{item.label}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -56,29 +107,45 @@ export function ContactSection() {
           <div className="grid gap-0 lg:grid-cols-[1fr_0.9fr]">
             <form onSubmit={onSubmit} className="space-y-5 p-6 sm:p-8">
               <FloatingField label="Name">
-                <Input required placeholder="Name" />
+                <Input required name="name" autoComplete="name" placeholder="Name" />
               </FloatingField>
               <FloatingField label="Telefon oder E-Mail">
-                <Input required placeholder="Telefon oder E-Mail" />
+                <Input
+                  required
+                  name="contact"
+                  autoComplete="email"
+                  placeholder="Telefon oder E-Mail"
+                />
               </FloatingField>
               <FloatingField label="Projektart">
-                <Input placeholder="Renovierung, Fassade, Innenausbau ..." />
+                <Input
+                  name="projectType"
+                  placeholder="Renovierung, Fassade, Innenausbau ..."
+                />
               </FloatingField>
               <FloatingField label="Nachricht">
-                <Textarea required placeholder="Nachricht" />
+                <Textarea required name="message" placeholder="Nachricht" />
               </FloatingField>
-              <Button variant="gold" className="w-full" type="submit">
-                Anfrage senden
+              <Button
+                variant="gold"
+                className="w-full"
+                type="submit"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Wird gesendet ..." : "Anfrage senden"}
                 <Send className="h-4 w-4" />
               </Button>
-              {sent && (
+              {message && (
                 <motion.p
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="rounded-[8px] bg-sand-100 p-3 text-sm font-semibold text-anthracite-900"
+                  className={`rounded-[8px] p-3 text-sm font-semibold ${
+                    status === "sent"
+                      ? "bg-sand-100 text-anthracite-900"
+                      : "bg-red-50 text-red-900"
+                  }`}
                 >
-                  Danke. Die Demo-Formularanimation funktioniert. Für echte Anfragen
-                  verbinden wir später E-Mail oder ein CRM.
+                  {message}
                 </motion.p>
               )}
             </form>

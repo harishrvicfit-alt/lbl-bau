@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, BadgeCheck, MapPin, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { company } from "@/lib/company";
 import { trustPoints } from "@/lib/data";
 
 export function HeroSection() {
@@ -130,7 +131,11 @@ export function HeroSection() {
               sizes="(min-width: 1024px) 42vw, 100vw"
             />
           </div>
-          <div className="absolute -bottom-6 -left-8 rounded-[8px] border border-white/12 bg-white/12 p-5 shadow-premium backdrop-blur-2xl">
+          <a
+            href={`tel:${company.phoneHref}`}
+            className="absolute -bottom-6 -left-8 rounded-[8px] border border-white/12 bg-white/12 p-5 shadow-premium backdrop-blur-2xl outline-none transition hover:-translate-y-1 hover:border-sand-300/60 focus-visible:ring-4 focus-visible:ring-sand-500/30"
+            aria-label="LBL Bau telefonisch kontaktieren"
+          >
             <div className="flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-full bg-sand-500 text-anthracite-950">
                 <Phone className="h-5 w-5" />
@@ -142,7 +147,7 @@ export function HeroSection() {
                 <p className="font-display text-lg font-bold">Schnell & persönlich</p>
               </div>
             </div>
-          </div>
+          </a>
           <div className="absolute -right-6 top-10 rounded-[8px] border border-white/12 bg-anthracite-950/64 p-4 shadow-glow backdrop-blur-2xl">
             <div className="flex items-center gap-2 text-sm text-white/80">
               <MapPin className="h-4 w-4 text-sand-400" />

@@ -48,7 +48,16 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   const goTo = (href: string) => {
     setOpen(false);
-    gsap.to(window, { duration: 0.85, scrollTo: href, ease: "power3.inOut" });
+    if (!document.querySelector(href)) {
+      window.location.hash = href;
+      return;
+    }
+
+    gsap.to(window, {
+      duration: 0.85,
+      scrollTo: { y: href, offsetY: 88 },
+      ease: "power3.inOut",
+    });
   };
 
   return (
@@ -139,7 +148,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
           <div className="hidden lg:block">
             <Button variant="gold" asChild>
-              <a href={`tel:${company.phoneHref}`}>
+              <a href="#kontakt" onClick={(event) => {
+                event.preventDefault();
+                goTo("#kontakt");
+              }}>
                 <Phone className="h-4 w-4" />
                 Angebot anfragen
               </a>

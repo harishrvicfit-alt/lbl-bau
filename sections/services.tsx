@@ -21,14 +21,16 @@ export function ServicesSection() {
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <motion.article
+            <motion.a
               key={service.title}
+              href="#kontakt"
+              aria-label={`${service.title} anfragen`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.65, delay: index * 0.06 }}
               whileHover={{ y: -8, rotateX: 2, rotateY: -2 }}
-              className="group relative min-h-72 overflow-hidden rounded-[8px] border border-anthracite-950/10 bg-white p-7 shadow-[0_18px_60px_rgba(23,23,23,0.08)]"
+              className="group relative min-h-72 overflow-hidden rounded-[8px] border border-anthracite-950/10 bg-white p-7 shadow-[0_18px_60px_rgba(23,23,23,0.08)] outline-none transition focus-visible:ring-4 focus-visible:ring-sand-500/30"
             >
               <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-sand-500 transition-transform duration-500 group-hover:scale-x-100" />
               <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sand-300/20 blur-3xl transition duration-500 group-hover:bg-ember/24" />
@@ -44,7 +46,7 @@ export function ServicesSection() {
                 </h3>
                 <p className="mt-4 leading-7 text-anthracite-700">{service.description}</p>
               </div>
-            </motion.article>
+            </motion.a>
           ))}
         </div>
       </div>
