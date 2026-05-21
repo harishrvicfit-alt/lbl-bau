@@ -18,12 +18,23 @@ export function StatsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.08 }}
           >
-            <Card className="group border-white/18 bg-anthracite-950/82 text-white transition duration-300 hover:-translate-y-1 hover:shadow-glow">
+            <Card
+              className="group border-anthracite-950/10 bg-white text-anthracite-950 shadow-[0_18px_60px_rgba(23,23,23,0.08)] transition duration-300 hover:-translate-y-1 hover:border-sand-500/40 hover:shadow-glow"
+              style={{ backgroundColor: "#ffffff", color: "#171717" }}
+            >
               <CardContent>
-                <p className="font-display text-4xl font-black text-sand-300">
+                <p
+                  className="font-display text-4xl font-black text-sand-500"
+                  style={{ color: "#e30613" }}
+                >
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="mt-3 text-sm text-white/70">{stat.label}</p>
+                <p
+                  className="mt-3 text-sm font-semibold text-anthracite-800"
+                  style={{ color: "#2c2c28" }}
+                >
+                  {stat.label}
+                </p>
               </CardContent>
             </Card>
           </motion.div>
