@@ -5,6 +5,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
+import { company } from "@/lib/company";
 
 export function CtaSection() {
   return (
@@ -32,7 +33,7 @@ export function CtaSection() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:+49000000000">
+                <a href={`tel:${company.phoneHref}`}>
                   <Phone className="h-5 w-5" />
                   Jetzt anrufen
                 </a>
