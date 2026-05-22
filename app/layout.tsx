@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | LBL Bau",
   },
   description:
-    "LBL Bau ist Ihr moderner Baupartner fuer Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und kleinere bis mittlere Bauprojekte.",
+    "LBL Bau ist Ihr moderner Baupartner für Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und kleinere bis mittlere Bauprojekte.",
   keywords: [
     "LBL Bau",
     "Baufirma Bayern",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LBL Bau",
     description:
-      "Qualitaet am Bau. Modern. Praezise. Zuverlaessig. Ihr Partner fuer hochwertige Bau- und Renovierungsarbeiten.",
+      "Qualität am Bau. Modern. Präzise. Zuverlässig. Ihr Partner für hochwertige Bau- und Renovierungsarbeiten.",
     url: siteUrl,
     siteName: "LBL Bau",
     locale: "de_DE",

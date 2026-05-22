@@ -21,7 +21,7 @@ export const navItems = [
   { label: "Home", href: "#home" },
   { label: "Leistungen", href: "#leistungen" },
   { label: "Projekte", href: "#projekte" },
-  { label: "Über Uns", href: "#ueber-uns" },
+  { label: "Über uns", href: "#ueber-uns" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -83,54 +83,54 @@ export const benefits = [
 export const projects = [
   {
     title: "Sanierung Einfamilienhaus",
-    category: "Renovierung",
-    location: "Waldkraiburg",
+    category: "Projektbereich",
+    location: "Renovierung & Modernisierung",
     image: "/images/project-house-renovation.jpg",
     description:
-      "Komplette Modernisierung mit neuen Oberflächen, optimierter Raumwirkung und sauberer Ausführung.",
+      "Beispielhafter Leistungsbereich für die Modernisierung von Wohnhäusern: Oberflächen, Details, Koordination und saubere Übergabe aus einer Hand.",
   },
   {
     title: "Moderne Fassadengestaltung",
-    category: "Fassade",
-    location: "Mühldorf am Inn",
+    category: "Projektbereich",
+    location: "Fassade & Putzarbeiten",
     image: "/images/project-modern-facade.jpg",
     description:
-      "Zeitlose Fassadenarbeiten mit warmer Materialwirkung und präzisen Anschlussdetails.",
+      "Leistungsbereich für Fassadenarbeiten mit klarer Optik, langlebigen Materialien und präzisen Anschlussdetails.",
   },
   {
     title: "Innenausbau Wohnbereich",
-    category: "Innenausbau",
-    location: "Ampfing",
+    category: "Projektbereich",
+    location: "Trockenbau & Innenarbeiten",
     image: "/images/project-interior-work.jpg",
     description:
-      "Eleganter Innenausbau mit Trockenbau, Lichtlinien und hochwertigem Finish.",
+      "Leistungsbereich für hochwertigen Innenausbau mit Trockenbau, Böden, Wandflächen und sauberem Finish.",
   },
   {
     title: "Einfahrt & Außenanlage",
-    category: "Pflaster",
-    location: "Kraiburg am Inn",
+    category: "Projektbereich",
+    location: "Pflaster & Außenbereich",
     image: "/images/project-driveway.jpg",
     description:
-      "Robuste Pflasterarbeiten mit klaren Kanten, Entwässerung und harmonischer Außenwirkung.",
+      "Leistungsbereich für Einfahrten, Wege und Außenflächen mit robustem Aufbau, klaren Kanten und gepflegter Gesamtwirkung.",
   },
 ];
 
 export const testimonials = [
   {
     name: "Thomas R.",
-    place: "Waldkraiburg",
+    place: "Oberbayern",
     text: "Sehr saubere Arbeit, klare Kommunikation und der Zeitplan wurde eingehalten. Genau so stellt man sich einen Handwerksbetrieb vor.",
     stars: 5,
   },
   {
     name: "Martina K.",
-    place: "Mühldorf am Inn",
+    place: "Landkreis Mühldorf",
     text: "Unsere Renovierung lief ruhig, zuverlässig und mit viel Liebe zum Detail. Das Ergebnis wirkt deutlich hochwertiger als erwartet.",
     stars: 5,
   },
   {
     name: "Familie Berger",
-    place: "Ampfing",
+    place: "Bayern",
     text: "Faire Beratung, transparente Kosten und ein Team, dem man das eigene Zuhause gerne anvertraut.",
     stars: 5,
   },

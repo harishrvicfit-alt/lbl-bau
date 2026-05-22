@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { company } from "@/lib/company";
@@ -46,10 +46,30 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
   const goTo = (href: string) => {
     setOpen(false);
     if (!document.querySelector(href)) {
-      window.location.hash = href;
+      window.location.href = `/${href}`;
       return;
     }
 
@@ -148,11 +168,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
           <div className="hidden lg:block">
             <Button variant="gold" asChild>
-              <a href="#kontakt" onClick={(event) => {
-                event.preventDefault();
-                goTo("#kontakt");
-              }}>
-                <Phone className="h-4 w-4" />
+              <a
+                href="#kontakt"
+                onClick={(event) => {
+                  event.preventDefault();
+                  goTo("#kontakt");
+                }}
+              >
                 Angebot anfragen
               </a>
             </Button>
@@ -161,8 +183,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <button
             className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur lg:hidden"
             onClick={() => setOpen((value) => !value)}
-            aria-label="Menü öffnen"
+            aria-label={open ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -171,25 +194,39 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            className="fixed inset-x-4 top-24 z-40 rounded-[8px] border border-white/10 bg-anthracite-950/94 p-4 text-white shadow-premium backdrop-blur-2xl lg:hidden"
-          >
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => goTo(item.href)}
-                className="block w-full rounded-[8px] px-4 py-4 text-left text-sm font-semibold hover:bg-white/10"
-              >
-                {item.label}
-              </button>
-            ))}
-            <Button className="mt-3 w-full" variant="gold" asChild>
-              <a href={`tel:${company.phoneHref}`}>Jetzt anrufen</a>
-            </Button>
-          </motion.div>
+          <>
+            <motion.button
+              type="button"
+              aria-label="Menü schließen Overlay"
+              className="fixed inset-0 z-40 bg-anthracite-950/78 backdrop-blur-sm lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+            />
+            <motion.div
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              className="fixed inset-x-4 top-24 z-50 rounded-[8px] border border-white/10 bg-anthracite-950 p-4 text-white shadow-premium lg:hidden"
+            >
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => goTo(item.href)}
+                  className="block w-full rounded-[8px] px-4 py-4 text-left text-sm font-semibold hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sand-300"
+                >
+                  {item.label}
+                </button>
+              ))}
+              <Button className="mt-3 w-full" variant="gold" asChild>
+                <a href={`tel:${company.phoneHref}`}>Jetzt anrufen</a>
+              </Button>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
 
@@ -197,4 +234,3 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     </>
   );
 }
-

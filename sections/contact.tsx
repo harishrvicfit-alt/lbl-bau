@@ -106,25 +106,39 @@ export function ContactSection() {
         <div className="overflow-hidden rounded-[8px] bg-white shadow-premium">
           <div className="grid gap-0 lg:grid-cols-[1fr_0.9fr]">
             <form onSubmit={onSubmit} className="space-y-5 p-6 sm:p-8">
-              <FloatingField label="Name">
-                <Input required name="name" autoComplete="name" placeholder="Name" />
-              </FloatingField>
-              <FloatingField label="Telefon oder E-Mail">
+              <FloatingField id="contact-name" label="Name">
                 <Input
+                  id="contact-name"
+                  required
+                  name="name"
+                  autoComplete="name"
+                  placeholder="Name"
+                />
+              </FloatingField>
+              <FloatingField id="contact-method" label="Telefon oder E-Mail">
+                <Input
+                  id="contact-method"
                   required
                   name="contact"
                   autoComplete="email"
                   placeholder="Telefon oder E-Mail"
                 />
               </FloatingField>
-              <FloatingField label="Projektart">
+              <FloatingField id="contact-project-type" label="Projektart">
                 <Input
+                  id="contact-project-type"
                   name="projectType"
+                  autoComplete="off"
                   placeholder="Renovierung, Fassade, Innenausbau ..."
                 />
               </FloatingField>
-              <FloatingField label="Nachricht">
-                <Textarea required name="message" placeholder="Nachricht" />
+              <FloatingField id="contact-message" label="Nachricht">
+                <Textarea
+                  id="contact-message"
+                  required
+                  name="message"
+                  placeholder="Nachricht"
+                />
               </FloatingField>
               <Button
                 variant="gold"
@@ -144,6 +158,7 @@ export function ContactSection() {
                       ? "bg-sand-100 text-anthracite-900"
                       : "bg-red-50 text-red-900"
                   }`}
+                  role={status === "error" ? "alert" : "status"}
                 >
                   {message}
                 </motion.p>
@@ -152,7 +167,7 @@ export function ContactSection() {
 
             <div className="min-h-[420px] bg-anthracite-950 p-4">
               <iframe
-                title="LBL Bau Karte"
+                title="Standort LBL Bau"
                 loading="lazy"
                 className="h-full min-h-[390px] w-full rounded-[8px] border-0 grayscale"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(
@@ -168,18 +183,23 @@ export function ContactSection() {
 }
 
 function FloatingField({
+  id,
   label,
   children,
 }: {
+  id: string;
   label: string;
   children: React.ReactNode;
 }) {
   return (
-    <label className="relative block">
+    <div className="relative block">
       {children}
-      <span className="pointer-events-none absolute left-4 top-2 text-[11px] font-bold uppercase tracking-[0.14em] text-anthracite-500 transition-all peer-focus:text-sand-700">
+      <label
+        htmlFor={id}
+        className="pointer-events-none absolute left-4 top-2 text-[11px] font-bold uppercase tracking-[0.14em] text-anthracite-500 transition-all peer-focus:text-sand-700"
+      >
         {label}
-      </span>
-    </label>
+      </label>
+    </div>
   );
 }

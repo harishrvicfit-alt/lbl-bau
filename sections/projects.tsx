@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -22,12 +22,12 @@ export function ProjectsSection() {
               Projekte
             </p>
             <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
-              Ausgewählte Arbeiten mit ruhiger, hochwertiger Wirkung.
+              Projektbereiche mit ruhiger, hochwertiger Wirkung.
             </h2>
           </div>
           <p className="max-w-sm text-anthracite-700">
-            Realistische Platzhalter bis echte Referenzbilder und Projekttexte ergänzt
-            werden.
+            Beispielhafte Leistungsbereiche bis echte Referenzbilder und Projekttexte
+            ergänzt werden.
           </p>
         </div>
 
@@ -35,12 +35,13 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.button
               key={project.title}
+              aria-label={`Projekt ansehen: ${project.title}`}
               initial={{ opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, delay: index * 0.08 }}
               onClick={() => setSelected(project)}
-              className={`group relative overflow-hidden rounded-[8px] bg-anthracite-900 text-left shadow-premium ${
+              className={`group relative overflow-hidden rounded-[8px] bg-anthracite-900 text-left shadow-premium outline-none focus-visible:ring-4 focus-visible:ring-sand-500/30 ${
                 index === 0 ? "md:col-span-2 md:row-span-2" : ""
               } ${index === 2 ? "lg:col-span-2" : ""}`}
             >
@@ -81,35 +82,45 @@ export function ProjectsSection() {
               </Dialog.Overlay>
               <Dialog.Content asChild>
                 <motion.div
-                  initial={{ opacity: 0, y: 34, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 20, scale: 0.96 }}
-                  className="fixed left-1/2 top-1/2 z-[75] max-h-[88svh] w-[min(920px,calc(100%-28px))] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[8px] bg-white shadow-premium"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 z-[75] grid place-items-center p-4"
                 >
-                  <div className="relative h-[360px]">
-                    <Image src={selected.image} alt={selected.title} fill className="object-cover" />
-                    <Dialog.Close asChild>
-                      <button className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-anthracite-950/70 text-white backdrop-blur">
-                        <X className="h-5 w-5" />
-                      </button>
-                    </Dialog.Close>
-                  </div>
-                  <div className="p-7">
-                    <p className="text-sm font-bold uppercase tracking-[0.22em] text-sand-700">
-                      {selected.category} · {selected.location}
-                    </p>
-                    <Dialog.Title className="mt-3 font-display text-3xl font-black text-anthracite-950">
-                      {selected.title}
-                    </Dialog.Title>
-                    <Dialog.Description className="mt-4 leading-8 text-anthracite-700">
-                      {selected.description}
-                    </Dialog.Description>
-                    <Button className="mt-6" variant="default" asChild>
-                      <a href="#kontakt" onClick={() => setSelected(null)}>
-                        Ähnliches Projekt anfragen
-                      </a>
-                    </Button>
-                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 34, scale: 0.96 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 20, scale: 0.96 }}
+                    className="max-h-[calc(100svh-32px)] w-full max-w-[920px] overflow-y-auto rounded-[8px] bg-white shadow-premium"
+                  >
+                    <div className="relative h-56 sm:h-[360px]">
+                      <Image src={selected.image} alt={selected.title} fill className="object-cover" />
+                      <Dialog.Close asChild>
+                        <button
+                          className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-anthracite-950/70 text-white backdrop-blur"
+                          aria-label="Projektfenster schließen"
+                        >
+                          <X className="h-5 w-5" />
+                        </button>
+                      </Dialog.Close>
+                    </div>
+                    <div className="p-5 sm:p-7">
+                      <p className="text-sm font-bold uppercase tracking-[0.22em] text-sand-700">
+                        {selected.category} · {selected.location}
+                      </p>
+                      <Dialog.Title className="mt-3 font-display text-3xl font-black text-anthracite-950">
+                        {selected.title}
+                      </Dialog.Title>
+                      <Dialog.Description className="mt-4 leading-8 text-anthracite-700">
+                        {selected.description}
+                      </Dialog.Description>
+                      <Button className="mt-6" variant="default" asChild>
+                        <a href="#kontakt" onClick={() => setSelected(null)}>
+                          Ähnliches Projekt anfragen
+                        </a>
+                      </Button>
+                    </div>
+                  </motion.div>
                 </motion.div>
               </Dialog.Content>
             </Dialog.Portal>

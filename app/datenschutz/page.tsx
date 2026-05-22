@@ -6,14 +6,14 @@ import { company } from "@/lib/company";
 import { Footer } from "@/sections/footer";
 
 export const metadata: Metadata = {
-  title: "Impressum",
-  description: "Impressum und Kontaktangaben für LBL Bau.",
+  title: "Datenschutz",
+  description: "Datenschutzhinweise für den Webauftritt von LBL Bau.",
   alternates: {
-    canonical: "/impressum",
+    canonical: "/datenschutz",
   },
 };
 
-export default function ImpressumPage() {
+export default function DatenschutzPage() {
   return (
     <>
       <main className="min-h-screen bg-sand-50 pb-20 pt-12 text-anthracite-950">
@@ -30,17 +30,17 @@ export default function ImpressumPage() {
               Rechtliches
             </p>
             <h1 className="mt-4 font-display text-5xl font-black leading-tight sm:text-6xl">
-              Impressum
+              Datenschutz
             </h1>
             <p className="mt-6 max-w-2xl leading-8 text-anthracite-700">
-              Angaben gemäß § 5 TMG für den Webauftritt von LBL Bau. Bitte prüfen
-              Sie Rechtsform, Registerdaten und Steuerangaben vor der finalen
-              Veröffentlichung mit dem Inhaber oder Steuerberater.
+              Diese Datenschutzhinweise beschreiben, wie personenbezogene Daten
+              auf dieser Website verarbeitet werden. Bitte vor finaler
+              Veröffentlichung rechtlich prüfen lassen.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 rounded-[8px] border border-anthracite-950/10 bg-white p-6 shadow-premium md:p-10">
-            <LegalBlock title="Anbieter">
+            <LegalBlock title="Verantwortlicher">
               <p>
                 <strong>{company.legalName}</strong>
                 <br />
@@ -48,55 +48,47 @@ export default function ImpressumPage() {
                 <br />
                 {company.street}
                 <br />
-                {company.postalCode} {company.city}
-                <br />
-                {company.country}
-              </p>
-            </LegalBlock>
-
-            <LegalBlock title="Kontakt">
-              <p>
-                Telefon:{" "}
-                <a className="underline-offset-4 hover:underline" href={`tel:${company.phoneHref}`}>
-                  {company.phoneDisplay}
-                </a>
-                <br />
-                Fax: {company.faxDisplay}
+                {company.postalCode} {company.city}, {company.country}
                 <br />
                 E-Mail:{" "}
                 <a className="underline-offset-4 hover:underline" href={`mailto:${company.email}`}>
                   {company.email}
                 </a>
-                <br />
-                Website: {company.website}
               </p>
             </LegalBlock>
 
-            <LegalBlock title="Erreichbarkeit">
-              <p>{company.officeHours}</p>
-            </LegalBlock>
-
-            <LegalBlock title="Haftung für Inhalte">
+            <LegalBlock title="Kontaktformular">
               <p>
-                Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für
-                Richtigkeit, Vollständigkeit und Aktualität kann dennoch keine
-                Gewähr übernommen werden. Verbindliche Angebote und
-                Projektinformationen erhalten Sie direkt nach persönlicher
-                Abstimmung.
+                Wenn Sie das Kontaktformular nutzen, verarbeiten wir Ihre Angaben
+                zur Bearbeitung der Anfrage. Dazu gehören Name, Kontaktmöglichkeit,
+                Projektart und Nachricht. Die Übermittlung erfolgt nur zur
+                Beantwortung Ihrer Anfrage.
               </p>
             </LegalBlock>
 
-            <LegalBlock title="Website">
+            <LegalBlock title="Server-Logs">
               <p>
-                Webdesign und Umsetzung:{" "}
-                <a
-                  href={company.creditUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold text-sand-700 underline-offset-4 hover:underline"
-                >
-                  {company.creditName}
-                </a>
+                Beim Aufruf der Website können technische Zugriffsdaten wie
+                IP-Adresse, Zeitpunkt, Browsertyp und angefragte URL verarbeitet
+                werden. Diese Daten dienen dem sicheren und stabilen Betrieb der
+                Website.
+              </p>
+            </LegalBlock>
+
+            <LegalBlock title="Google Maps">
+              <p>
+                Auf der Kontaktseite kann eine Karte von Google Maps eingebunden
+                sein. Beim Laden der Karte können Daten an Google übertragen
+                werden. Alternativ ist die Adresse auch direkt als Text angegeben.
+              </p>
+            </LegalBlock>
+
+            <LegalBlock title="Ihre Rechte">
+              <p>
+                Sie haben im Rahmen der gesetzlichen Vorgaben Rechte auf Auskunft,
+                Berichtigung, Löschung, Einschränkung der Verarbeitung und
+                Widerspruch. Für Anfragen nutzen Sie bitte die oben genannten
+                Kontaktdaten.
               </p>
             </LegalBlock>
           </div>

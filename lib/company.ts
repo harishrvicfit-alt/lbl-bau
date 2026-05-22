@@ -18,6 +18,7 @@ export const company = {
   mapQuery: "Kuehamer Str. 2, 84431 Heldenstein, Germany",
   creditName: "H-Cyber",
   creditUrl: "https://h-cyber.de",
+  contactFormRecipient: "info@h-cyber.de",
 };
 
 export const fullAddress = `${company.street}, ${company.postalCode} ${company.city}`;

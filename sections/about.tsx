@@ -16,7 +16,7 @@ const timeline = [
 export function AboutSection() {
   return (
     <AnimatedSection id="ueber-uns" className="overflow-hidden bg-anthracite-950 py-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(217,141,63,0.18),transparent_30%),radial-gradient(circle_at_80%_70%,rgba(213,184,137,0.12),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(227,6,19,0.16),transparent_30%),radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.1),transparent_28%)]" />
       <div className="section-shell relative grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative min-h-[560px]">
           <motion.div
@@ -53,14 +53,14 @@ export function AboutSection() {
 
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-300">
-            Über Uns
+            Über uns
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-tight sm:text-5xl">
             Lokal verwurzelt, sorgfältig geplant und hochwertig umgesetzt.
           </h2>
           <p className="mt-6 text-lg leading-8 text-white/72">
-            LBL Bau ist eine kleinere, flexible Baufirma aus Bayern.
-            Unser Anspruch ist nicht Masse, sondern saubere Arbeit, ehrliche
+            LBL Bau ist eine kleinere, flexible Baufirma aus Bayern. Unser
+            Anspruch ist nicht Masse, sondern saubere Arbeit, ehrliche
             Kommunikation und ein Ergebnis, das auch nach Jahren überzeugt.
           </p>
 

@@ -9,7 +9,7 @@ import { testimonials } from "@/lib/data";
 export function TestimonialsSection() {
   return (
     <AnimatedSection className="overflow-hidden bg-anthracite-950 py-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(217,141,63,0.18),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(227,6,19,0.16),transparent_28%)]" />
       <div className="section-shell relative">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-300">
@@ -21,16 +21,16 @@ export function TestimonialsSection() {
         </div>
 
         <div className="no-scrollbar mt-14 flex gap-5 overflow-x-auto pb-4">
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <motion.article
-              key={`${testimonial.name}-${index}`}
+              key={testimonial.name}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: (index % 3) * 0.08 }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
               className="min-w-[310px] flex-1 rounded-[8px] border border-white/10 bg-white/[0.07] p-6 backdrop-blur-2xl md:min-w-[380px]"
             >
-              <div className="flex gap-1 text-sand-400">
+              <div className="flex gap-1 text-sand-400" aria-label={`${testimonial.stars} Sterne`}>
                 {Array.from({ length: testimonial.stars }).map((_, star) => (
                   <Star key={star} className="h-4 w-4 fill-current" />
                 ))}

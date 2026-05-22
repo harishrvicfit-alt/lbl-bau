@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         message:
-          "Die Anfrage wurde vorbereitet, aber der Mailversand ist noch nicht konfiguriert. Bitte kurz telefonisch melden.",
+          "Der Mailversand ist noch nicht konfiguriert. Bitte RESEND_API_KEY in Vercel hinterlegen oder kurz telefonisch melden.",
       },
       { status: 503 },
     );
@@ -69,7 +69,7 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({
-    message: `Danke. Ihre Anfrage wurde testweise an ${recipientEmail} gesendet.`,
+    message: `Danke. Ihre Anfrage wurde an ${recipientEmail} gesendet.`,
   });
 }
 

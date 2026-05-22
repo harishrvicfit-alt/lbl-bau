@@ -10,7 +10,7 @@ import { trustPoints } from "@/lib/data";
 
 export function HeroSection() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 700], [0, 140]);
+  const y = useTransform(scrollY, [0, 700], [0, 120]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0.35]);
 
   return (
@@ -28,7 +28,7 @@ export function HeroSection() {
         />
       </motion.div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,7,0.92)_0%,rgba(8,8,7,0.72)_45%,rgba(8,8,7,0.36)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(217,141,63,0.2),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(213,184,137,0.16),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(227,6,19,0.18),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(255,255,255,0.12),transparent_30%)]" />
 
       <div className="pointer-events-none absolute inset-0">
         {Array.from({ length: 16 }).map((_, index) => (
@@ -50,13 +50,13 @@ export function HeroSection() {
         ))}
       </div>
 
-      <div className="section-shell relative z-10 grid min-h-[100svh] items-center gap-12 pb-20 pt-32 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="section-shell relative z-10 grid min-h-[100svh] items-center gap-8 pb-16 pt-28 lg:grid-cols-[1.08fr_0.92fr] lg:pb-14 lg:pt-24">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-sand-100 backdrop-blur-2xl"
+            className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-sand-100 backdrop-blur-2xl"
           >
             <BadgeCheck className="h-4 w-4 text-sand-400" />
             Premium Baupartner: LBL Bau
@@ -75,7 +75,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
-            className="mt-7 max-w-2xl text-lg leading-8 text-white/76"
+            className="mt-6 max-w-2xl text-lg leading-8 text-white/76"
           >
             Hochwertige Renovierungen, Innenausbau, Fassaden und kleinere bis
             mittlere Bauprojekte mit sauberer Planung und präziser Ausführung.
@@ -85,7 +85,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.38 }}
-            className="mt-9 flex flex-col gap-4 sm:flex-row"
+            className="mt-8 flex flex-col gap-4 sm:flex-row"
           >
             <Button variant="gold" size="lg" className="magnetic-shine" asChild>
               <a href="#kontakt">
@@ -102,7 +102,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.55, duration: 0.9 }}
-            className="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4"
+            className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4 lg:mt-7"
           >
             {trustPoints.map((item) => (
               <div
@@ -122,7 +122,7 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
           className="relative hidden lg:block"
         >
-          <div className="image-mask relative aspect-[0.82] overflow-hidden rounded-[8px] border border-white/12 bg-white/10 shadow-premium backdrop-blur">
+          <div className="image-mask relative aspect-[0.86] max-h-[520px] overflow-hidden rounded-[8px] border border-white/12 bg-white/10 shadow-premium backdrop-blur">
             <Image
               src="/images/hero-detail-work.jpg"
               alt="Detailarbeit bei moderner Renovierung"
@@ -133,7 +133,7 @@ export function HeroSection() {
           </div>
           <a
             href={`tel:${company.phoneHref}`}
-            className="absolute -bottom-6 -left-8 rounded-[8px] border border-white/12 bg-white/12 p-5 shadow-premium backdrop-blur-2xl outline-none transition hover:-translate-y-1 hover:border-sand-300/60 focus-visible:ring-4 focus-visible:ring-sand-500/30"
+            className="absolute -bottom-4 -left-6 rounded-[8px] border border-white/12 bg-white/12 p-5 shadow-premium backdrop-blur-2xl outline-none transition hover:-translate-y-1 hover:border-sand-300/60 focus-visible:ring-4 focus-visible:ring-sand-500/30"
             aria-label="LBL Bau telefonisch kontaktieren"
           >
             <div className="flex items-center gap-3">
@@ -148,7 +148,7 @@ export function HeroSection() {
               </div>
             </div>
           </a>
-          <div className="absolute -right-6 top-10 rounded-[8px] border border-white/12 bg-anthracite-950/64 p-4 shadow-glow backdrop-blur-2xl">
+          <div className="absolute -right-4 top-8 rounded-[8px] border border-white/12 bg-anthracite-950/64 p-4 shadow-glow backdrop-blur-2xl">
             <div className="flex items-center gap-2 text-sm text-white/80">
               <MapPin className="h-4 w-4 text-sand-400" />
               Bayern

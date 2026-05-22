@@ -1,10 +1,39 @@
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { company, fullAddress } from "@/lib/company";
 import { navItems } from "@/lib/data";
 
 export function Footer() {
+  const footerNavItems = navItems.map((item) => ({
+    ...item,
+    href: item.href.startsWith("#") ? `/${item.href}` : item.href,
+  }));
+
+  const quickContactLinks = [
+    {
+      href: `tel:${company.phoneHref}`,
+      label: "Anrufen",
+      aria: "LBL Bau anrufen",
+      icon: Phone,
+    },
+    {
+      href: `mailto:${company.email}`,
+      label: "E-Mail",
+      aria: "LBL Bau per E-Mail kontaktieren",
+      icon: Mail,
+    },
+    {
+      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        company.mapQuery,
+      )}`,
+      label: "Route",
+      aria: "Adresse in Google Maps öffnen",
+      icon: MapPin,
+      external: true,
+    },
+  ];
+
   return (
     <footer className="bg-anthracite-950 py-12 text-white">
       <div className="section-shell">
@@ -28,15 +57,15 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-6 max-w-md leading-7 text-white/60">
-              Moderne Bauleistungen, Renovierungen und hochwertige Ausfuehrung
-              fuer private und gewerbliche Projekte in Bayern.
+              Moderne Bauleistungen, Renovierungen und hochwertige Ausführung
+              für private und gewerbliche Projekte in Bayern.
             </p>
           </div>
 
           <div>
             <p className="mb-4 font-display font-bold">Quick Links</p>
             <div className="space-y-3">
-              {navItems.map((item) => (
+              {footerNavItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
@@ -47,6 +76,12 @@ export function Footer() {
               ))}
               <a href="/impressum" className="block text-sm text-white/60 hover:text-sand-300">
                 Impressum
+              </a>
+              <a
+                href="/datenschutz"
+                className="block text-sm text-white/60 hover:text-sand-300"
+              >
+                Datenschutz
               </a>
             </div>
           </div>
@@ -61,14 +96,17 @@ export function Footer() {
               <p>{company.officeHours}</p>
             </div>
             <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Linkedin].map((Icon, index) => (
+              {quickContactLinks.map((item) => (
                 <a
-                  key={index}
-                  href="#home"
+                  key={item.href}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
                   className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/70 hover:border-sand-400 hover:text-sand-300"
-                  aria-label="Social Profil"
+                  aria-label={item.aria}
+                  title={item.label}
                 >
-                  <Icon className="h-4 w-4" />
+                  <item.icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -80,6 +118,9 @@ export function Footer() {
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a href="/impressum" className="transition hover:text-white">
               Impressum
+            </a>
+            <a href="/datenschutz" className="transition hover:text-white">
+              Datenschutz
             </a>
             <a href={`mailto:${company.email}`} className="transition hover:text-white">
               Kontakt

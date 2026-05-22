@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
@@ -12,7 +12,7 @@ export function CtaSection() {
     <AnimatedSection className="bg-white py-24">
       <div className="section-shell">
         <div className="relative overflow-hidden rounded-[8px] bg-anthracite-950 px-6 py-16 text-white shadow-premium sm:px-12 lg:px-16">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(217,141,63,0.28),transparent_34%),radial-gradient(circle_at_15%_80%,rgba(213,184,137,0.18),transparent_30%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(227,6,19,0.24),transparent_34%),radial-gradient(circle_at_15%_80%,rgba(255,255,255,0.16),transparent_30%)]" />
           <motion.div
             className="absolute right-10 top-10 h-40 w-40 rounded-full border border-sand-300/20"
             animate={{ y: [0, -18, 0], rotate: [0, 8, 0] }}
