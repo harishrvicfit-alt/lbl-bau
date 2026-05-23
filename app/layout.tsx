@@ -11,9 +11,21 @@ export const metadata: Metadata = {
     template: "%s | LBL Bau",
   },
   description:
-    "LBL Bau ist Ihr moderner Baupartner für Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und kleinere bis mittlere Bauprojekte.",
+    "LBL Bau ist Ihr moderner Baupartner in Heldenstein, Waldkraiburg und Mühldorf am Inn für Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und kleinere bis mittlere Bauprojekte.",
   keywords: [
     "LBL Bau",
+    "LBL Bau Heldenstein",
+    "Bauunternehmen Heldenstein",
+    "Baufirma Heldenstein",
+    "Baufirma Waldkraiburg",
+    "Bauunternehmen Waldkraiburg",
+    "Baufirma Mühldorf am Inn",
+    "Renovierung Heldenstein",
+    "Renovierung Waldkraiburg",
+    "Innenausbau Heldenstein",
+    "Trockenbau Heldenstein",
+    "Fassadenarbeiten Heldenstein",
+    "Pflasterarbeiten Mühldorf am Inn",
     "Baufirma Bayern",
     "Renovierung Bayern",
     "Innenausbau Bayern",
@@ -22,10 +34,15 @@ export const metadata: Metadata = {
     "Pflasterarbeiten",
     "Hausbau",
   ],
+  authors: [{ name: company.brandName, url: siteUrl }],
+  creator: company.brandName,
+  publisher: company.brandName,
+  applicationName: company.brandName,
+  category: "construction",
   openGraph: {
-    title: "LBL Bau",
+    title: "LBL Bau | Bauunternehmen in Heldenstein",
     description:
-      "Qualität am Bau. Modern. Präzise. Zuverlässig. Ihr Partner für hochwertige Bau- und Renovierungsarbeiten.",
+      "Qualität am Bau. Modern. Präzise. Zuverlässig. Ihr Partner für hochwertige Bau- und Renovierungsarbeiten in Heldenstein, Waldkraiburg und Mühldorf am Inn.",
     url: siteUrl,
     siteName: "LBL Bau",
     locale: "de_DE",
@@ -41,6 +58,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LBL Bau | Renovierung, Innenausbau & Hausbau",
+    description:
+      "Regionaler Baupartner für hochwertige Renovierung, Innenausbau, Fassadenarbeiten und Pflasterarbeiten in Heldenstein und Umgebung.",
+    images: ["/images/og-cover.svg"],
   },
   icons: {
     icon: [

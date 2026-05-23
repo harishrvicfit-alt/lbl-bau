@@ -13,7 +13,7 @@ export const company = {
   phoneHref: "+491734593296",
   faxDisplay: "08636 829",
   email: "kontakt@lbl-bau.de",
-  website: "https://lbl-bau.vercel.app",
+  website: "https://www.lblbau.de",
   officeHours: "Di. und Do. 9:00-15:30 Uhr, Mi. 9:00-17:00 Uhr",
   mapQuery: "Kuehamer Str. 2, 84431 Heldenstein, Germany",
   creditName: "H-Cyber",
