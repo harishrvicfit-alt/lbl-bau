@@ -1,6 +1,7 @@
 export const company = {
   brandName: "LBL Bau",
   legalName: "LBL Bau",
+  legalForm: "Einzelunternehmen",
   projectSlug: "lbl-bau",
   logo: "/images/lbl-bau-logo.png",
   owner: "Zoran Katava",

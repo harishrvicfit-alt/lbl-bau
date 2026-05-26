@@ -43,6 +43,8 @@ export default function ImpressumPage() {
               <p>
                 <strong>{company.legalName}</strong>
                 <br />
+                Rechtsform: {company.legalForm}
+                <br />
                 Inhaber: {company.owner}
                 <br />
                 {company.street}
