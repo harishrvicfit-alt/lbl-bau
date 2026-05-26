@@ -13,6 +13,7 @@ import { company, fullAddress } from "@/lib/company";
 export function ContactSection() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [mapEnabled, setMapEnabled] = useState(false);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -166,14 +167,49 @@ export function ContactSection() {
             </form>
 
             <div className="min-h-[420px] bg-anthracite-950 p-4">
-              <iframe
-                title="Standort LBL Bau"
-                loading="lazy"
-                className="h-full min-h-[390px] w-full rounded-[8px] border-0 grayscale"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(
-                  company.mapQuery,
-                )}&output=embed`}
-              />
+              {mapEnabled ? (
+                <iframe
+                  title="Standort LBL Bau"
+                  loading="lazy"
+                  className="h-full min-h-[390px] w-full rounded-[8px] border-0 grayscale"
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(
+                    company.mapQuery,
+                  )}&output=embed`}
+                />
+              ) : (
+                <div className="grid h-full min-h-[390px] place-items-center rounded-[8px] border border-white/10 bg-[radial-gradient(circle_at_50%_20%,rgba(227,6,19,0.18),transparent_34%),#10100f] p-6 text-center text-white">
+                  <div className="max-w-sm">
+                    <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-ember text-white">
+                      <MapPin className="h-6 w-6" />
+                    </span>
+                    <h3 className="mt-5 font-display text-2xl font-black">
+                      Karte anzeigen
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-white/68">
+                      Die Karte wird erst nach Ihrer Aktivierung von Google Maps
+                      geladen.
+                    </p>
+                    <Button
+                      type="button"
+                      variant="gold"
+                      className="mt-6"
+                      onClick={() => setMapEnabled(true)}
+                    >
+                      Google Maps laden
+                    </Button>
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                        company.mapQuery,
+                      )}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 block text-sm font-semibold text-sand-200 underline-offset-4 hover:underline"
+                    >
+                      Route extern öffnen
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

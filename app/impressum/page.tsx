@@ -33,9 +33,8 @@ export default function ImpressumPage() {
               Impressum
             </h1>
             <p className="mt-6 max-w-2xl leading-8 text-anthracite-700">
-              Angaben gemäß § 5 TMG für den Webauftritt von LBL Bau. Bitte prüfen
-              Sie Rechtsform, Registerdaten und Steuerangaben vor der finalen
-              Veröffentlichung mit dem Inhaber oder Steuerberater.
+              Angaben nach § 5 Digitale-Dienste-Gesetz (DDG) für den
+              Webauftritt von LBL Bau.
             </p>
           </div>
 
@@ -68,7 +67,10 @@ export default function ImpressumPage() {
                   {company.email}
                 </a>
                 <br />
-                Website: {company.website}
+                Website:{" "}
+                <a className="underline-offset-4 hover:underline" href={company.website}>
+                  {company.website}
+                </a>
               </p>
             </LegalBlock>
 
@@ -76,13 +78,28 @@ export default function ImpressumPage() {
               <p>{company.officeHours}</p>
             </LegalBlock>
 
+            <LegalBlock title="Verantwortlich für den Inhalt">
+              <p>
+                Verantwortlich für die Inhalte dieser Website ist {company.owner}
+                unter der oben genannten Anschrift.
+              </p>
+            </LegalBlock>
+
             <LegalBlock title="Haftung für Inhalte">
               <p>
                 Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für
-                Richtigkeit, Vollständigkeit und Aktualität kann dennoch keine
-                Gewähr übernommen werden. Verbindliche Angebote und
-                Projektinformationen erhalten Sie direkt nach persönlicher
+                Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann
+                dennoch keine Gewähr übernommen werden. Verbindliche Angebote
+                und Projektinformationen erhalten Sie direkt nach persönlicher
                 Abstimmung.
+              </p>
+            </LegalBlock>
+
+            <LegalBlock title="Verbraucherstreitbeilegung">
+              <p>
+                Wir sind nicht verpflichtet und nicht bereit, an einem
+                Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+                teilzunehmen.
               </p>
             </LegalBlock>
 
