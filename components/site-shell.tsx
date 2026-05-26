@@ -85,28 +85,87 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <AnimatePresence>
         {!loaded && (
           <motion.div
-            className="fixed inset-0 z-[100] grid place-items-center bg-anthracite-950 text-white"
+            className="fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-[#070706] text-white"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.65, ease: "easeInOut" }}
           >
             <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center"
+              className="absolute inset-0 opacity-60"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              transition={{ duration: 0.7 }}
             >
-              <div className="relative mx-auto mb-5 h-16 w-32 overflow-hidden rounded-[8px] bg-white p-2 shadow-glow">
+              <div className="absolute left-1/2 top-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ember/18 blur-[90px]" />
+              <div className="absolute right-[18%] top-[24%] h-28 w-28 rounded-full bg-white/8 blur-3xl" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(7,7,6,0.34)_48%,rgba(7,7,6,0.96)_100%)]" />
+            </motion.div>
+            <motion.div
+              className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 22, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+              className="relative text-center"
+            >
+              <motion.div
+                className="absolute -inset-8 rounded-full border border-white/5"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+              />
+              <motion.div
+                className="relative mx-auto mb-6 h-[78px] w-[156px] overflow-hidden rounded-[8px] border border-white/12 bg-white p-3 shadow-[0_24px_90px_rgba(227,6,19,0.26)]"
+                initial={{ clipPath: "inset(0 50% 0 50%)" }}
+                animate={{ clipPath: "inset(0 0% 0 0%)" }}
+                transition={{ duration: 0.62, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <Image
                   src={company.logo}
                   alt={`${company.brandName} Logo`}
                   fill
-                  sizes="128px"
-                  className="object-contain"
+                  sizes="156px"
+                  className="object-contain p-2"
                   priority
                 />
-              </div>
-              <p className="font-display text-sm uppercase tracking-[0.34em] text-sand-100">
+                <motion.span
+                  className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/55 to-transparent"
+                  initial={{ x: "-120%" }}
+                  animate={{ x: "340%" }}
+                  transition={{ duration: 1.15, delay: 0.35, ease: "easeInOut" }}
+                />
+              </motion.div>
+              <motion.p
+                className="font-display text-sm font-bold uppercase tracking-[0.42em] text-white"
+                initial={{ opacity: 0, letterSpacing: "0.2em" }}
+                animate={{ opacity: 1, letterSpacing: "0.42em" }}
+                transition={{ duration: 0.5, delay: 0.28 }}
+              >
                 LBL Bau
-              </p>
+              </motion.p>
+              <motion.div
+                className="mx-auto mt-5 h-[3px] w-40 overflow-hidden rounded-full bg-white/10"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: 0.4 }}
+              >
+                <motion.div
+                  className="h-full rounded-full bg-gradient-to-r from-ember via-sand-400 to-ember"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "100%" }}
+                  transition={{ duration: 1.05, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </motion.div>
+              <motion.p
+                className="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-sand-100/68"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.55 }}
+              >
+                Qualität wird geladen
+              </motion.p>
             </motion.div>
           </motion.div>
         )}
