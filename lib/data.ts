@@ -27,8 +27,8 @@ export const navItems = [
 
 export const stats = [
   { value: 10, suffix: "+", label: "Jahre Erfahrung" },
-  { value: 150, suffix: "+", label: "Abgeschlossene Projekte" },
-  { value: 98, suffix: "%", label: "Weiterempfehlung" },
+  { value: 50, suffix: "+", label: "Abgeschlossene Projekte" },
+  { value: 95, suffix: "%", label: "Weiterempfehlung" },
   { value: 24, suffix: "h", label: "Schnelle Rückmeldung" },
 ];
 
