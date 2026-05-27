@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | LBL Bau",
   },
   description:
-    "LBL Bau ist Ihr moderner Baupartner in Heldenstein, Waldkraiburg und Mühldorf am Inn für Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und kleinere bis mittlere Bauprojekte.",
+    "LBL Bau in Heldenstein: Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und Hausbau in Waldkraiburg und Mühldorf.",
   keywords: [
     "LBL Bau",
     "LBL Bau Heldenstein",
