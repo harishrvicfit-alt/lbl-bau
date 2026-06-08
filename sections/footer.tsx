@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { company, fullAddress } from "@/lib/company";
 import { navItems } from "@/lib/data";
+import { localize, useLanguage } from "@/lib/i18n";
 
 export function Footer() {
+  const { language, text } = useLanguage();
   const footerNavItems = navItems.map((item) => ({
     ...item,
     href: item.href.startsWith("#") ? `/${item.href}` : item.href,
@@ -13,22 +17,22 @@ export function Footer() {
   const quickContactLinks = [
     {
       href: `tel:${company.phoneHref}`,
-      label: "Anrufen",
-      aria: "LBL Bau anrufen",
+      label: text.footer.call,
+      aria: text.contact.phoneAria,
       icon: Phone,
     },
     {
       href: `mailto:${company.email}`,
       label: "E-Mail",
-      aria: "LBL Bau per E-Mail kontaktieren",
+      aria: text.contact.mailAria,
       icon: Mail,
     },
     {
       href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
         company.mapQuery,
       )}`,
-      label: "Route",
-      aria: "Adresse in Google Maps öffnen",
+      label: text.footer.route,
+      aria: text.footer.routeAria,
       icon: MapPin,
       external: true,
     },
@@ -53,17 +57,16 @@ export function Footer() {
                 <p className="font-display text-sm font-bold uppercase tracking-[0.2em]">
                   {company.brandName}
                 </p>
-                <p className="text-sm text-white/50">Premium Bau & Renovierung</p>
+                <p className="text-sm text-white/50">{text.footer.tagline}</p>
               </div>
             </div>
             <p className="mt-6 max-w-md leading-7 text-white/60">
-              Moderne Bauleistungen, Renovierungen und hochwertige Ausführung
-              für private und gewerbliche Projekte in Bayern.
+              {text.footer.intro}
             </p>
           </div>
 
           <div>
-            <p className="mb-4 font-display font-bold">Quick Links</p>
+            <p className="mb-4 font-display font-bold">{text.footer.quickLinks}</p>
             <div className="space-y-3">
               {footerNavItems.map((item) => (
                 <a
@@ -71,7 +74,7 @@ export function Footer() {
                   href={item.href}
                   className="block text-sm text-white/60 hover:text-sand-300"
                 >
-                  {item.label}
+                  {localize(item.label, language)}
                 </a>
               ))}
               <a href="/impressum" className="block text-sm text-white/60 hover:text-sand-300">
@@ -87,7 +90,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 font-display font-bold">Kontakt</p>
+            <p className="mb-4 font-display font-bold">{text.footer.contact}</p>
             <div className="space-y-3 text-sm text-white/60">
               <p>{fullAddress}</p>
               <p>{company.phoneDisplay}</p>
@@ -114,7 +117,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 {company.brandName}. Alle Rechte vorbehalten.</p>
+          <p>© 2026 {company.brandName}. {text.footer.rights}</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a href="/impressum" className="transition hover:text-white">
               Impressum
@@ -131,7 +134,7 @@ export function Footer() {
               rel="noreferrer"
               className="font-semibold text-sand-300 transition hover:text-white"
             >
-              Website by {company.creditName}
+              {text.footer.websiteBy} {company.creditName}
             </a>
           </div>
         </div>

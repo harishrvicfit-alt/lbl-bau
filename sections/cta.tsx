@@ -6,8 +6,11 @@ import { ArrowRight, Phone } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
 import { company } from "@/lib/company";
+import { useLanguage } from "@/lib/i18n";
 
 export function CtaSection() {
+  const { text } = useLanguage();
+
   return (
     <AnimatedSection className="bg-white py-24">
       <div className="section-shell">
@@ -20,22 +23,22 @@ export function CtaSection() {
           />
           <div className="relative z-10 max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-300">
-              Nächstes Projekt
+              {text.finalCta.eyebrow}
             </p>
             <h2 className="mt-4 font-display text-4xl font-black leading-tight sm:text-5xl">
-              Starten Sie Ihr nächstes Bauprojekt mit einem Team, das sauber denkt und präzise arbeitet.
+              {text.finalCta.title}
             </h2>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Button variant="gold" size="lg" asChild>
                 <a href="#kontakt">
-                  Projekt besprechen
+                  {text.finalCta.primary}
                   <ArrowRight className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a href={`tel:${company.phoneHref}`}>
                   <Phone className="h-5 w-5" />
-                  Jetzt anrufen
+                  {text.finalCta.call}
                 </a>
               </Button>
             </div>

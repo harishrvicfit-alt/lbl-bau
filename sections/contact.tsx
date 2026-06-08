@@ -9,8 +9,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { company, fullAddress } from "@/lib/company";
+import { useLanguage } from "@/lib/i18n";
 
 export function ContactSection() {
+  const { text } = useLanguage();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [message, setMessage] = useState("");
   const [mapEnabled, setMapEnabled] = useState(false);
@@ -30,18 +32,18 @@ export function ContactSection() {
       const result = (await response.json()) as { message?: string };
 
       if (!response.ok) {
-        throw new Error(result.message ?? "Die Anfrage konnte nicht gesendet werden.");
+        throw new Error(text.contact.error);
       }
 
       setStatus("sent");
-      setMessage(result.message ?? "Danke. Ihre Anfrage wurde gesendet.");
+      setMessage(text.contact.success);
       form.reset();
     } catch (error) {
       setStatus("error");
       setMessage(
         error instanceof Error
           ? error.message
-          : "Die Anfrage konnte nicht gesendet werden.",
+          : text.contact.error,
       );
     }
   };
@@ -51,13 +53,13 @@ export function ContactSection() {
       icon: Phone,
       label: company.phoneDisplay,
       href: `tel:${company.phoneHref}`,
-      aria: "LBL Bau anrufen",
+      aria: text.contact.phoneAria,
     },
     {
       icon: Mail,
       label: company.email,
       href: `mailto:${company.email}`,
-      aria: "LBL Bau per E-Mail kontaktieren",
+      aria: text.contact.mailAria,
     },
     {
       icon: MapPin,
@@ -65,7 +67,7 @@ export function ContactSection() {
       href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
         company.mapQuery,
       )}`,
-      aria: "LBL Bau Adresse in Google Maps öffnen",
+      aria: text.contact.mapAria,
       external: true,
     },
   ];
@@ -75,14 +77,13 @@ export function ContactSection() {
       <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
-            Kontakt
+            {text.contact.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
-            Erzählen Sie uns kurz von Ihrem Projekt.
+            {text.contact.title}
           </h2>
           <p className="mt-6 leading-8 text-anthracite-700">
-            Wir melden uns schnell zurück, besprechen den Umfang und geben eine
-            realistische Einschätzung für Ablauf, Kosten und Zeitplan.
+            {text.contact.intro}
           </p>
 
           <div className="mt-10 space-y-4">
@@ -107,38 +108,38 @@ export function ContactSection() {
         <div className="overflow-hidden rounded-[8px] bg-white shadow-premium">
           <div className="grid gap-0 lg:grid-cols-[1fr_0.9fr]">
             <form onSubmit={onSubmit} className="space-y-5 p-6 sm:p-8">
-              <FloatingField id="contact-name" label="Name">
+              <FloatingField id="contact-name" label={text.contact.name}>
                 <Input
                   id="contact-name"
                   required
                   name="name"
                   autoComplete="name"
-                  placeholder="Name"
+                  placeholder={text.contact.name}
                 />
               </FloatingField>
-              <FloatingField id="contact-method" label="Telefon oder E-Mail">
+              <FloatingField id="contact-method" label={text.contact.contactMethod}>
                 <Input
                   id="contact-method"
                   required
                   name="contact"
                   autoComplete="email"
-                  placeholder="Telefon oder E-Mail"
+                  placeholder={text.contact.contactMethod}
                 />
               </FloatingField>
-              <FloatingField id="contact-project-type" label="Projektart">
+              <FloatingField id="contact-project-type" label={text.contact.projectType}>
                 <Input
                   id="contact-project-type"
                   name="projectType"
                   autoComplete="off"
-                  placeholder="Renovierung, Fassade, Innenausbau ..."
+                  placeholder={text.contact.projectPlaceholder}
                 />
               </FloatingField>
-              <FloatingField id="contact-message" label="Nachricht">
+              <FloatingField id="contact-message" label={text.contact.message}>
                 <Textarea
                   id="contact-message"
                   required
                   name="message"
-                  placeholder="Nachricht"
+                  placeholder={text.contact.message}
                 />
               </FloatingField>
               <Button
@@ -147,7 +148,7 @@ export function ContactSection() {
                 type="submit"
                 disabled={status === "sending"}
               >
-                {status === "sending" ? "Wird gesendet ..." : "Anfrage senden"}
+                {status === "sending" ? text.contact.sending : text.contact.submit}
                 <Send className="h-4 w-4" />
               </Button>
               {message && (
@@ -183,11 +184,10 @@ export function ContactSection() {
                       <MapPin className="h-6 w-6" />
                     </span>
                     <h3 className="mt-5 font-display text-2xl font-black">
-                      Karte anzeigen
+                      {text.contact.mapTitle}
                     </h3>
                     <p className="mt-3 text-sm leading-6 text-white/68">
-                      Die Karte wird erst nach Ihrer Aktivierung von Google Maps
-                      geladen.
+                      {text.contact.mapText}
                     </p>
                     <Button
                       type="button"
@@ -195,7 +195,7 @@ export function ContactSection() {
                       className="mt-6"
                       onClick={() => setMapEnabled(true)}
                     >
-                      Google Maps laden
+                      {text.contact.mapButton}
                     </Button>
                     <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -205,7 +205,7 @@ export function ContactSection() {
                       rel="noreferrer"
                       className="mt-4 block text-sm font-semibold text-sand-200 underline-offset-4 hover:underline"
                     >
-                      Route extern öffnen
+                      {text.contact.route}
                     </a>
                   </div>
                 </div>

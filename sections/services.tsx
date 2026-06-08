@@ -5,26 +5,29 @@ import { ArrowUpRight } from "lucide-react";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { services } from "@/lib/data";
+import { localize, useLanguage } from "@/lib/i18n";
 
 export function ServicesSection() {
+  const { language, text } = useLanguage();
+
   return (
     <AnimatedSection id="leistungen" className="bg-sand-50 py-24">
       <div className="section-shell">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
-            Leistungen
+            {text.services.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
-            Hochwertige Bauleistungen für moderne Wohn- und Arbeitsräume.
+            {text.services.title}
           </h2>
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.a
-              key={service.title}
+              key={localize(service.title, language)}
               href="#kontakt"
-              aria-label={`${service.title} anfragen`}
+              aria-label={`${localize(service.title, language)} ${text.services.ariaSuffix}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -42,9 +45,11 @@ export function ServicesSection() {
                   <ArrowUpRight className="h-5 w-5 text-anthracite-950/35 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-sand-700" />
                 </div>
                 <h3 className="font-display text-2xl font-extrabold text-anthracite-950">
-                  {service.title}
+                  {localize(service.title, language)}
                 </h3>
-                <p className="mt-4 leading-7 text-anthracite-700">{service.description}</p>
+                <p className="mt-4 leading-7 text-anthracite-700">
+                  {localize(service.description, language)}
+                </p>
               </div>
             </motion.a>
           ))}

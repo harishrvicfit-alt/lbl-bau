@@ -7,8 +7,10 @@ import { ArrowRight, BadgeCheck, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { company } from "@/lib/company";
 import { trustPoints } from "@/lib/data";
+import { localize, useLanguage } from "@/lib/i18n";
 
 export function HeroSection() {
+  const { language, text } = useLanguage();
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 700], [0, 120]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0.35]);
@@ -59,7 +61,7 @@ export function HeroSection() {
             className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-sand-100 backdrop-blur-2xl"
           >
             <BadgeCheck className="h-4 w-4 text-sand-400" />
-            Premium Baupartner: LBL Bau
+            {text.hero.badge}
           </motion.div>
 
           <motion.h1
@@ -68,7 +70,7 @@ export function HeroSection() {
             transition={{ duration: 0.95, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="text-balance font-display text-5xl font-black leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl"
           >
-            LBL Bau. Modern. Präzise. Zuverlässig.
+            {text.hero.headline}
           </motion.h1>
 
           <motion.p
@@ -77,8 +79,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
             className="mt-6 max-w-2xl text-lg leading-8 text-white/76"
           >
-            Hochwertige Renovierungen, Innenausbau, Fassaden und kleinere bis
-            mittlere Bauprojekte mit sauberer Planung und präziser Ausführung.
+            {text.hero.intro}
           </motion.p>
 
           <motion.div
@@ -89,12 +90,12 @@ export function HeroSection() {
           >
             <Button variant="gold" size="lg" className="magnetic-shine" asChild>
               <a href="#kontakt">
-                Angebot anfragen
+                {text.hero.primary}
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="#projekte">Projekte ansehen</a>
+              <a href="#projekte">{text.hero.secondary}</a>
             </Button>
           </motion.div>
 
@@ -106,11 +107,13 @@ export function HeroSection() {
           >
             {trustPoints.map((item) => (
               <div
-                key={item.label}
+                key={localize(item.label, language)}
                 className="rounded-[8px] border border-white/10 bg-white/[0.07] p-3 backdrop-blur-xl"
               >
                 <item.icon className="mb-3 h-5 w-5 text-sand-400" />
-                <p className="text-xs leading-5 text-white/76">{item.label}</p>
+                <p className="text-xs leading-5 text-white/76">
+                  {localize(item.label, language)}
+                </p>
               </div>
             ))}
           </motion.div>
@@ -142,9 +145,9 @@ export function HeroSection() {
               </span>
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-sand-100/80">
-                  Beratung
+                  {text.hero.consulting}
                 </p>
-                <p className="font-display text-lg font-bold">Schnell & persönlich</p>
+                <p className="font-display text-lg font-bold">{text.hero.fastPersonal}</p>
               </div>
             </div>
           </a>

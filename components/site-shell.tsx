@@ -10,11 +10,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { company } from "@/lib/company";
 import { navItems } from "@/lib/data";
+import { localize, type Language, useLanguage } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollToPlugin);
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
+  const { language, setLanguage, text } = useLanguage();
   const [loaded, setLoaded] = useState(false);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -164,7 +166,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.55 }}
               >
-                Qualität wird geladen
+                {text.loading}
               </motion.p>
             </motion.div>
           </motion.div>
@@ -192,7 +194,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <button
             onClick={() => goTo("#home")}
             className="flex items-center gap-3 text-left text-white"
-            aria-label="Zur Startseite"
+            aria-label={text.cta.home}
           >
             <span className="relative h-12 w-24 overflow-hidden rounded-[8px] border border-white/20 bg-white p-2 shadow-[0_14px_35px_rgba(0,0,0,0.18)] sm:w-32">
               <Image
@@ -208,7 +210,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <span className="block font-display text-sm font-bold uppercase tracking-[0.2em]">
                 {company.brandName}
               </span>
-              <span className="block text-xs text-sand-100/80">Bau & Renovierung</span>
+              <span className="block text-xs text-sand-100/80">{text.headerTagline}</span>
             </span>
           </button>
 
@@ -219,7 +221,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 onClick={() => goTo(item.href)}
                 className="group relative text-sm font-medium text-white/80 transition hover:text-white"
               >
-                {item.label}
+                {localize(item.label, language)}
                 <span className="absolute -bottom-2 left-0 h-px w-0 bg-sand-500 transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
@@ -234,15 +236,19 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   goTo("#kontakt");
                 }}
               >
-                Angebot anfragen
+                {text.cta.request}
               </a>
             </Button>
+          </div>
+
+          <div className="hidden lg:block">
+            <LanguageSwitcher language={language} setLanguage={setLanguage} />
           </div>
 
           <button
             className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur lg:hidden"
             onClick={() => setOpen((value) => !value)}
-            aria-label={open ? "Menü schließen" : "Menü öffnen"}
+            aria-label={open ? text.cta.closeMenu : text.cta.openMenu}
             aria-expanded={open}
             aria-controls="mobile-menu"
           >
@@ -278,11 +284,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   onClick={() => goTo(item.href)}
                   className="block w-full rounded-[8px] px-4 py-4 text-left text-sm font-semibold hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sand-300"
                 >
-                  {item.label}
+                  {localize(item.label, language)}
                 </button>
               ))}
+              <div className="px-4 py-3">
+                <LanguageSwitcher language={language} setLanguage={setLanguage} />
+              </div>
               <Button className="mt-3 w-full" variant="gold" asChild>
-                <a href={`tel:${company.phoneHref}`}>Jetzt anrufen</a>
+                <a href={`tel:${company.phoneHref}`}>{text.cta.call}</a>
               </Button>
             </motion.div>
           </>
@@ -291,5 +300,37 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
       <main>{children}</main>
     </>
+  );
+}
+
+function LanguageSwitcher({
+  language,
+  setLanguage,
+}: {
+  language: Language;
+  setLanguage: (language: Language) => void;
+}) {
+  return (
+    <div
+      className="inline-flex rounded-full border border-white/15 bg-white/10 p-1 text-xs font-bold text-white backdrop-blur"
+      aria-label="Sprache auswählen"
+    >
+      {(["de", "hr"] as const).map((item) => (
+        <button
+          key={item}
+          type="button"
+          onClick={() => setLanguage(item)}
+          className={cn(
+            "rounded-full px-3 py-1.5 uppercase tracking-[0.12em] transition",
+            language === item
+              ? "bg-sand-500 text-anthracite-950"
+              : "text-white/70 hover:text-white",
+          )}
+          aria-pressed={language === item}
+        >
+          {item}
+        </button>
+      ))}
+    </div>
   );
 }

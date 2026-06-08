@@ -17,128 +17,162 @@ import {
   WalletCards,
 } from "lucide-react";
 
+export type LocalizedText = {
+  de: string;
+  hr: string;
+};
+
 export const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Leistungen", href: "#leistungen" },
-  { label: "Projekte", href: "#projekte" },
-  { label: "Über uns", href: "#ueber-uns" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: { de: "Home", hr: "Početna" }, href: "#home" },
+  { label: { de: "Leistungen", hr: "Usluge" }, href: "#leistungen" },
+  { label: { de: "Projekte", hr: "Projekti" }, href: "#projekte" },
+  { label: { de: "Über uns", hr: "O nama" }, href: "#ueber-uns" },
+  { label: { de: "Kontakt", hr: "Kontakt" }, href: "#kontakt" },
 ];
 
 export const stats = [
-  { value: 10, suffix: "+", label: "Jahre Erfahrung" },
-  { value: 50, suffix: "+", label: "Abgeschlossene Projekte" },
-  { value: 95, suffix: "%", label: "Weiterempfehlung" },
-  { value: 24, suffix: "h", label: "Schnelle Rückmeldung" },
+  { value: 10, suffix: "+", label: { de: "Jahre Erfahrung", hr: "Godina iskustva" } },
+  { value: 50, suffix: "+", label: { de: "Abgeschlossene Projekte", hr: "Završenih projekata" } },
+  { value: 95, suffix: "%", label: { de: "Weiterempfehlung", hr: "Preporuka klijenata" } },
+  { value: 24, suffix: "h", label: { de: "Schnelle Rückmeldung", hr: "Brz odgovor" } },
 ];
 
 export const services = [
   {
-    title: "Renovierung",
-    description:
-      "Saubere Modernisierung von Wohnungen, Häusern und Gewerbeflächen mit klarer Planung.",
+    title: { de: "Renovierung", hr: "Renoviranje" },
+    description: {
+      de: "Saubere Modernisierung von Wohnungen, Häusern und Gewerbeflächen mit klarer Planung.",
+      hr: "Uredna modernizacija stanova, kuća i poslovnih prostora uz jasno planiranje.",
+    },
     icon: Hammer,
   },
   {
-    title: "Innenausbau",
-    description:
-      "Trockenbau, Böden, Wände und detailgenaue Innenarbeiten aus einer Hand.",
+    title: { de: "Innenausbau", hr: "Unutarnji radovi" },
+    description: {
+      de: "Trockenbau, Böden, Wände und detailgenaue Innenarbeiten aus einer Hand.",
+      hr: "Suha gradnja, podovi, zidovi i precizni unutarnji radovi iz jedne ruke.",
+    },
     icon: Layers3,
   },
   {
-    title: "Fassadenarbeiten",
-    description:
-      "Moderne Fassadenlösungen, Putzarbeiten und energetische Verbesserungen.",
+    title: { de: "Fassadenarbeiten", hr: "Fasadni radovi" },
+    description: {
+      de: "Moderne Fassadenlösungen, Putzarbeiten und energetische Verbesserungen.",
+      hr: "Moderna fasadna rješenja, žbukanje i energetska poboljšanja objekata.",
+    },
     icon: Paintbrush,
   },
   {
-    title: "Trockenbau",
-    description:
-      "Flexible Raumlösungen, Decken, Trennwände und präzise Ausführung.",
+    title: { de: "Trockenbau", hr: "Suha gradnja" },
+    description: {
+      de: "Flexible Raumlösungen, Decken, Trennwände und präzise Ausführung.",
+      hr: "Fleksibilna prostorna rješenja, stropovi, pregradni zidovi i precizna izvedba.",
+    },
     icon: BrickWall,
   },
   {
-    title: "Pflasterarbeiten",
-    description:
-      "Einfahrten, Wege und Außenbereiche mit langlebigem, hochwertigem Finish.",
+    title: { de: "Pflasterarbeiten", hr: "Popločavanje" },
+    description: {
+      de: "Einfahrten, Wege und Außenbereiche mit langlebigem, hochwertigem Finish.",
+      hr: "Prilazi, staze i vanjske površine s dugotrajnim i kvalitetnim završetkom.",
+    },
     icon: Trees,
   },
   {
-    title: "Hausbau",
-    description:
-      "Kleinere bis mittlere Bauprojekte mit verlässlicher Koordination vor Ort.",
+    title: { de: "Hausbau", hr: "Gradnja kuća" },
+    description: {
+      de: "Kleinere bis mittlere Bauprojekte mit verlässlicher Koordination vor Ort.",
+      hr: "Manji do srednji građevinski projekti s pouzdanom koordinacijom na terenu.",
+    },
     icon: Home,
   },
 ];
 
 export const benefits = [
-  { title: "Termintreu", icon: CalendarCheck },
-  { title: "Präzise Arbeit", icon: Ruler },
-  { title: "Faire Preise", icon: WalletCards },
-  { title: "Moderne Lösungen", icon: Sparkles },
-  { title: "Zuverlässigkeit", icon: ShieldCheck },
-  { title: "Erfahrung", icon: Award },
+  { title: { de: "Termintreu", hr: "Poštivanje rokova" }, icon: CalendarCheck },
+  { title: { de: "Präzise Arbeit", hr: "Precizan rad" }, icon: Ruler },
+  { title: { de: "Faire Preise", hr: "Poštene cijene" }, icon: WalletCards },
+  { title: { de: "Moderne Lösungen", hr: "Moderna rješenja" }, icon: Sparkles },
+  { title: { de: "Zuverlässigkeit", hr: "Pouzdanost" }, icon: ShieldCheck },
+  { title: { de: "Erfahrung", hr: "Iskustvo" }, icon: Award },
 ];
 
 export const projects = [
   {
-    title: "Sanierung Einfamilienhaus",
-    category: "Projektbereich",
-    location: "Renovierung & Modernisierung",
+    title: { de: "Sanierung Einfamilienhaus", hr: "Sanacija obiteljske kuće" },
+    category: { de: "Projektbereich", hr: "Područje rada" },
+    location: { de: "Renovierung & Modernisierung", hr: "Renoviranje i modernizacija" },
     image: "/images/project-house-renovation.jpg",
-    description:
-      "Beispielhafter Leistungsbereich für die Modernisierung von Wohnhäusern: Oberflächen, Details, Koordination und saubere Übergabe aus einer Hand.",
+    description: {
+      de: "Beispielhafter Leistungsbereich für die Modernisierung von Wohnhäusern: Oberflächen, Details, Koordination und saubere Übergabe aus einer Hand.",
+      hr: "Primjer područja rada za modernizaciju obiteljskih kuća: površine, detalji, koordinacija i uredna predaja iz jedne ruke.",
+    },
   },
   {
-    title: "Moderne Fassadengestaltung",
-    category: "Projektbereich",
-    location: "Fassade & Putzarbeiten",
+    title: { de: "Moderne Fassadengestaltung", hr: "Moderno uređenje fasade" },
+    category: { de: "Projektbereich", hr: "Područje rada" },
+    location: { de: "Fassade & Putzarbeiten", hr: "Fasada i žbukanje" },
     image: "/images/project-modern-facade.jpg",
-    description:
-      "Leistungsbereich für Fassadenarbeiten mit klarer Optik, langlebigen Materialien und präzisen Anschlussdetails.",
+    description: {
+      de: "Leistungsbereich für Fassadenarbeiten mit klarer Optik, langlebigen Materialien und präzisen Anschlussdetails.",
+      hr: "Područje rada za fasadne radove s čistim izgledom, dugotrajnim materijalima i preciznim detaljima spojeva.",
+    },
   },
   {
-    title: "Innenausbau Wohnbereich",
-    category: "Projektbereich",
-    location: "Trockenbau & Innenarbeiten",
+    title: { de: "Innenausbau Wohnbereich", hr: "Unutarnji radovi u stambenom prostoru" },
+    category: { de: "Projektbereich", hr: "Područje rada" },
+    location: { de: "Trockenbau & Innenarbeiten", hr: "Suha gradnja i unutarnji radovi" },
     image: "/images/project-interior-work.jpg",
-    description:
-      "Leistungsbereich für hochwertigen Innenausbau mit Trockenbau, Böden, Wandflächen und sauberem Finish.",
+    description: {
+      de: "Leistungsbereich für hochwertigen Innenausbau mit Trockenbau, Böden, Wandflächen und sauberem Finish.",
+      hr: "Područje rada za kvalitetne unutarnje radove sa suhom gradnjom, podovima, zidnim površinama i urednim završetkom.",
+    },
   },
   {
-    title: "Einfahrt & Außenanlage",
-    category: "Projektbereich",
-    location: "Pflaster & Außenbereich",
+    title: { de: "Einfahrt & Außenanlage", hr: "Prilaz i vanjsko uređenje" },
+    category: { de: "Projektbereich", hr: "Područje rada" },
+    location: { de: "Pflaster & Außenbereich", hr: "Popločavanje i vanjski prostor" },
     image: "/images/project-driveway.jpg",
-    description:
-      "Leistungsbereich für Einfahrten, Wege und Außenflächen mit robustem Aufbau, klaren Kanten und gepflegter Gesamtwirkung.",
+    description: {
+      de: "Leistungsbereich für Einfahrten, Wege und Außenflächen mit robustem Aufbau, klaren Kanten und gepflegter Gesamtwirkung.",
+      hr: "Područje rada za prilaze, staze i vanjske površine s robusnom podlogom, čistim rubovima i urednim ukupnim dojmom.",
+    },
   },
 ];
 
 export const testimonials = [
   {
     name: "Thomas R.",
-    place: "Oberbayern",
-    text: "Sehr saubere Arbeit, klare Kommunikation und der Zeitplan wurde eingehalten. Genau so stellt man sich einen Handwerksbetrieb vor.",
+    place: { de: "Oberbayern", hr: "Gornja Bavarska" },
+    text: {
+      de: "Sehr saubere Arbeit, klare Kommunikation und der Zeitplan wurde eingehalten. Genau so stellt man sich einen Handwerksbetrieb vor.",
+      hr: "Vrlo uredan rad, jasna komunikacija i poštovan dogovoreni rok. Upravo tako treba izgledati ozbiljan obrt.",
+    },
     stars: 5,
   },
   {
     name: "Martina K.",
-    place: "Landkreis Mühldorf",
-    text: "Unsere Renovierung lief ruhig, zuverlässig und mit viel Liebe zum Detail. Das Ergebnis wirkt deutlich hochwertiger als erwartet.",
+    place: { de: "Landkreis Mühldorf", hr: "Okrug Mühldorf" },
+    text: {
+      de: "Unsere Renovierung lief ruhig, zuverlässig und mit viel Liebe zum Detail. Das Ergebnis wirkt deutlich hochwertiger als erwartet.",
+      hr: "Naše renoviranje prošlo je mirno, pouzdano i s puno pažnje prema detaljima. Rezultat izgleda kvalitetnije nego što smo očekivali.",
+    },
     stars: 5,
   },
   {
     name: "Familie Berger",
-    place: "Bayern",
-    text: "Faire Beratung, transparente Kosten und ein Team, dem man das eigene Zuhause gerne anvertraut.",
+    place: { de: "Bayern", hr: "Bavarska" },
+    text: {
+      de: "Faire Beratung, transparente Kosten und ein Team, dem man das eigene Zuhause gerne anvertraut.",
+      hr: "Pošteno savjetovanje, transparentni troškovi i tim kojem se bez brige može povjeriti vlastiti dom.",
+    },
     stars: 5,
   },
 ];
 
 export const trustPoints = [
-  { icon: BadgeCheck, label: "Deutsche Qualitätsstandards" },
-  { icon: Users, label: "Persönlicher Ansprechpartner" },
-  { icon: Building2, label: "Regional in Oberbayern" },
-  { icon: Star, label: "Hochwertige Ausführung" },
+  { icon: BadgeCheck, label: { de: "Deutsche Qualitätsstandards", hr: "Njemački standardi kvalitete" } },
+  { icon: Users, label: { de: "Persönlicher Ansprechpartner", hr: "Osobni kontakt" } },
+  { icon: Building2, label: { de: "Regional in Oberbayern", hr: "Regionalno u Bavarskoj" } },
+  { icon: Star, label: { de: "Hochwertige Ausführung", hr: "Kvalitetna izvedba" } },
 ];

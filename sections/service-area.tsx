@@ -1,34 +1,26 @@
+"use client";
+
 import { Building2, MapPin, Phone } from "lucide-react";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { company, fullAddress } from "@/lib/company";
-
-const serviceAreas = [
-  "Heldenstein",
-  "Waldkraiburg",
-  "Mühldorf am Inn",
-  "Ampfing",
-  "Kraiburg am Inn",
-  "Landkreis Mühldorf",
-];
+import { useLanguage } from "@/lib/i18n";
 
 export function ServiceAreaSection() {
+  const { text } = useLanguage();
+
   return (
     <AnimatedSection className="bg-white py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
-            Regional vor Ort
+            {text.serviceArea.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
-            Bauleistungen in Heldenstein, Waldkraiburg und Umgebung.
+            {text.serviceArea.title}
           </h2>
           <p className="mt-6 text-lg leading-8 text-anthracite-700">
-            LBL Bau unterstützt private und gewerbliche Kunden in der Region mit
-            Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau,
-            Pflasterarbeiten und kleineren bis mittleren Bauprojekten. Kurze
-            Wege, klare Abstimmung und eine zuverlässige Ausführung stehen dabei
-            im Mittelpunkt.
+            {text.serviceArea.intro}
           </p>
         </div>
 
@@ -54,7 +46,7 @@ export function ServiceAreaSection() {
             >
               <Phone className="h-5 w-5 text-ember" />
               <p className="mt-4 text-sm font-bold uppercase tracking-[0.18em] text-anthracite-500">
-                Direkt anrufen
+                {text.serviceArea.call}
               </p>
               <p className="mt-1 font-display text-2xl font-black text-anthracite-950">
                 {company.phoneDisplay}
@@ -71,7 +63,7 @@ export function ServiceAreaSection() {
             >
               <MapPin className="h-5 w-5 text-ember" />
               <p className="mt-4 text-sm font-bold uppercase tracking-[0.18em] text-anthracite-500">
-                Standort
+                {text.serviceArea.location}
               </p>
               <p className="mt-1 font-display text-2xl font-black text-anthracite-950">
                 Heldenstein
@@ -80,7 +72,7 @@ export function ServiceAreaSection() {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {serviceAreas.map((area) => (
+            {text.serviceArea.areas.map((area) => (
               <span
                 key={area}
                 className="rounded-full border border-anthracite-950/10 bg-sand-50 px-4 py-2 text-sm font-semibold text-anthracite-700"

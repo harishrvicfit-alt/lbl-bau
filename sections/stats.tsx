@@ -5,14 +5,17 @@ import { motion } from "framer-motion";
 import { Counter } from "@/components/counter";
 import { Card, CardContent } from "@/components/ui/card";
 import { stats } from "@/lib/data";
+import { localize, useLanguage } from "@/lib/i18n";
 
 export function StatsSection() {
+  const { language } = useLanguage();
+
   return (
     <section className="relative -mt-14 z-20 pb-20">
       <div className="section-shell grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat, index) => (
           <motion.div
-            key={stat.label}
+            key={localize(stat.label, language)}
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,7 +36,7 @@ export function StatsSection() {
                   className="mt-3 text-sm font-semibold text-anthracite-800"
                   style={{ color: "#2c2c28" }}
                 >
-                  {stat.label}
+                  {localize(stat.label, language)}
                 </p>
               </CardContent>
             </Card>

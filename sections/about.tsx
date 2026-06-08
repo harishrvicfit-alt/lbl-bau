@@ -5,15 +5,11 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 import { AnimatedSection } from "@/components/animated-section";
-
-const timeline = [
-  "Persönliche Beratung und klare Projektplanung",
-  "Saubere Koordination der Gewerke und Materialien",
-  "Präzise Ausführung nach deutschem Qualitätsanspruch",
-  "Verlässliche Übergabe mit sauberem Finish",
-];
+import { useLanguage } from "@/lib/i18n";
 
 export function AboutSection() {
+  const { text } = useLanguage();
+
   return (
     <AnimatedSection id="ueber-uns" className="overflow-hidden bg-anthracite-950 py-24 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(227,6,19,0.16),transparent_30%),radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.1),transparent_28%)]" />
@@ -53,19 +49,17 @@ export function AboutSection() {
 
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-300">
-            Über uns
+            {text.about.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-tight sm:text-5xl">
-            Lokal verwurzelt, sorgfältig geplant und hochwertig umgesetzt.
+            {text.about.title}
           </h2>
           <p className="mt-6 text-lg leading-8 text-white/72">
-            LBL Bau ist eine kleinere, flexible Baufirma aus Bayern. Unser
-            Anspruch ist nicht Masse, sondern saubere Arbeit, ehrliche
-            Kommunikation und ein Ergebnis, das auch nach Jahren überzeugt.
+            {text.about.intro}
           </p>
 
           <div className="mt-10 space-y-5">
-            {timeline.map((item, index) => (
+            {text.about.timeline.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, x: 24 }}
@@ -82,10 +76,10 @@ export function AboutSection() {
 
           <div className="mt-10 border-l-2 border-sand-500 pl-6">
             <p className="font-display text-2xl font-bold">
-              „Wir bauen so, dass Vertrauen sichtbar wird.“
+              {text.about.quote}
             </p>
             <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/50">
-              Geschäftsführung
+              {text.about.signature}
             </p>
           </div>
         </div>

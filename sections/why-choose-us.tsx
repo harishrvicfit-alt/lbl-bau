@@ -4,24 +4,27 @@ import { motion } from "framer-motion";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { benefits } from "@/lib/data";
+import { localize, useLanguage } from "@/lib/i18n";
 
 export function WhyChooseUsSection() {
+  const { language, text } = useLanguage();
+
   return (
     <AnimatedSection className="bg-sand-50 py-24">
       <div className="section-shell">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
-            Warum wir
+            {text.why.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
-            Ein Baupartner, der Klarheit, Tempo und Qualität zusammenbringt.
+            {text.why.title}
           </h2>
         </div>
 
         <div className="mt-14 grid gap-4 lg:grid-cols-6">
           {benefits.map((benefit, index) => (
             <motion.div
-              key={benefit.title}
+              key={localize(benefit.title, language)}
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -31,7 +34,7 @@ export function WhyChooseUsSection() {
               <div className="absolute inset-y-0 left-0 w-1 bg-sand-500" />
               <benefit.icon className="h-7 w-7 text-sand-700 transition duration-300 group-hover:scale-110" />
               <h3 className="mt-9 font-display text-2xl font-black text-anthracite-950">
-                {benefit.title}
+                {localize(benefit.title, language)}
               </h3>
             </motion.div>
           ))}

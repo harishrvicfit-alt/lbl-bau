@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { company } from "@/lib/company";
+import { LanguageProvider } from "@/lib/i18n";
 
 const siteUrl = company.website;
 
@@ -82,7 +83,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
