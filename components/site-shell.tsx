@@ -15,6 +15,8 @@ import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollToPlugin);
 
+const showLanguageSwitcher = false;
+
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const { language, setLanguage, text } = useLanguage();
   const [loaded, setLoaded] = useState(false);
@@ -241,9 +243,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </Button>
           </div>
 
-          <div className="hidden lg:block">
-            <LanguageSwitcher language={language} setLanguage={setLanguage} />
-          </div>
+          {showLanguageSwitcher && (
+            <div className="hidden lg:block">
+              <LanguageSwitcher language={language} setLanguage={setLanguage} />
+            </div>
+          )}
 
           <button
             className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur lg:hidden"
@@ -287,9 +291,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   {localize(item.label, language)}
                 </button>
               ))}
-              <div className="px-4 py-3">
-                <LanguageSwitcher language={language} setLanguage={setLanguage} />
-              </div>
+              {showLanguageSwitcher && (
+                <div className="px-4 py-3">
+                  <LanguageSwitcher language={language} setLanguage={setLanguage} />
+                </div>
+              )}
               <Button className="mt-3 w-full" variant="gold" asChild>
                 <a href={`tel:${company.phoneHref}`}>{text.cta.call}</a>
               </Button>
