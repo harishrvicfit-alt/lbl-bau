@@ -99,6 +99,30 @@ export const benefits = [
 
 export const projects = [
   {
+    title: {
+      de: "Doppelhaus-Neubau – laufende Mitarbeit",
+      hr: "Novogradnja dvojne kuće – radovi u tijeku",
+    },
+    category: { de: "Aktuelles Partnerprojekt", hr: "Aktualni partnerski projekt" },
+    location: {
+      de: "Unterstützende Bauarbeiten vor Ort",
+      hr: "Podrška pri građevinskim radovima",
+    },
+    image: "/images/projects/doppelhaus-neubau-aussenansicht.webp",
+    gallery: [
+      "/images/projects/doppelhaus-neubau-aussenansicht.webp",
+      "/images/projects/doppelhaus-neubau-mauerwerk.webp",
+      "/images/projects/doppelhaus-neubau-innenausbau.webp",
+      "/images/projects/doppelhaus-neubau-raumaufteilung.webp",
+      "/images/projects/doppelhaus-neubau-treppenhaus.webp",
+      "/images/projects/doppelhaus-neubau-baufortschritt.webp",
+    ],
+    description: {
+      de: "LBL Bau unterstützt dieses laufende Doppelhaus-Neubauprojekt als zuverlässiger Partner bei ausgewählten Bauarbeiten vor Ort. Die Aufnahmen dokumentieren den aktuellen Rohbau, das Mauerwerk, die Raumaufteilung und das Treppenhaus. Projektleitung und Gesamtleistung liegen bei den jeweils verantwortlichen Partnern.",
+      hr: "LBL Bau na ovoj novogradnji dvojne kuće sudjeluje kao pouzdan partner pri odabranim građevinskim radovima. Fotografije prikazuju aktualnu fazu rohbaua, zidarske radove, raspored prostorija i stubište. Vođenje projekta i ukupna izvedba pripadaju odgovornim partnerskim izvođačima.",
+    },
+  },
+  {
     title: { de: "Sanierung Einfamilienhaus", hr: "Sanacija obiteljske kuće" },
     category: { de: "Projektbereich", hr: "Područje rada" },
     location: { de: "Renovierung & Modernisierung", hr: "Renoviranje i modernizacija" },

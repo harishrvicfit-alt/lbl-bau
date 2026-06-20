@@ -14,6 +14,12 @@ import { localize, useLanguage } from "@/lib/i18n";
 export function ProjectsSection() {
   const { language, text } = useLanguage();
   const [selected, setSelected] = useState<(typeof projects)[number] | null>(null);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const openProject = (project: (typeof projects)[number]) => {
+    setSelected(project);
+    setSelectedImage(project.image);
+  };
 
   return (
     <AnimatedSection id="projekte" className="bg-white py-24">
@@ -41,7 +47,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, delay: index * 0.08 }}
-              onClick={() => setSelected(project)}
+              onClick={() => openProject(project)}
               className={`group relative overflow-hidden rounded-[8px] bg-anthracite-900 text-left shadow-premium outline-none focus-visible:ring-4 focus-visible:ring-sand-500/30 ${
                 index === 0 ? "md:col-span-2 md:row-span-2" : ""
               } ${index === 2 ? "lg:col-span-2" : ""}`}
@@ -73,7 +79,15 @@ export function ProjectsSection() {
         </div>
       </div>
 
-      <Dialog.Root open={Boolean(selected)} onOpenChange={(open) => !open && setSelected(null)}>
+      <Dialog.Root
+        open={Boolean(selected)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setSelected(null);
+            setSelectedImage("");
+          }
+        }}
+      >
         <AnimatePresence>
           {selected && (
             <Dialog.Portal forceMount>
@@ -100,7 +114,7 @@ export function ProjectsSection() {
                   >
                     <div className="relative h-56 sm:h-[360px]">
                       <Image
-                        src={selected.image}
+                        src={selectedImage || selected.image}
                         alt={localize(selected.title, language)}
                         fill
                         className="object-cover"
@@ -125,6 +139,36 @@ export function ProjectsSection() {
                       <Dialog.Description className="mt-4 leading-8 text-anthracite-700">
                         {localize(selected.description, language)}
                       </Dialog.Description>
+                      {"gallery" in selected && selected.gallery && (
+                        <div className="mt-7">
+                          <p className="text-sm font-bold uppercase tracking-[0.18em] text-anthracite-500">
+                            {text.projects.gallery}
+                          </p>
+                          <div className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-6">
+                            {selected.gallery.map((image, index) => (
+                              <button
+                                key={image}
+                                type="button"
+                                onClick={() => setSelectedImage(image)}
+                                className={`relative aspect-[4/3] overflow-hidden rounded-[6px] border-2 transition ${
+                                  selectedImage === image
+                                    ? "border-ember"
+                                    : "border-transparent opacity-70 hover:opacity-100"
+                                }`}
+                                aria-label={`${text.projects.galleryImage} ${index + 1}`}
+                              >
+                                <Image
+                                  src={image}
+                                  alt={localize(selected.title, language)}
+                                  fill
+                                  className="object-cover"
+                                  sizes="(min-width: 640px) 160px, 30vw"
+                                />
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       <Button className="mt-6" variant="default" asChild>
                         <a href="#kontakt" onClick={() => setSelected(null)}>
                           {text.projects.cta}

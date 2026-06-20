@@ -64,11 +64,13 @@ export const copy = {
     },
     projects: {
       eyebrow: "Projekte",
-      title: "Projektbereiche mit ruhiger, hochwertiger Wirkung.",
-      intro: "Beispielhafte Leistungsbereiche bis echte Referenzbilder und Projekttexte ergänzt werden.",
+      title: "Aktuelle Mitarbeit und ausgewählte Projektbereiche.",
+      intro: "Echte Aufnahmen aus laufender Zusammenarbeit, ergänzt durch ausgewählte Leistungsbereiche von LBL Bau.",
       ariaPrefix: "Projekt ansehen",
       close: "Projektfenster schließen",
       cta: "Ähnliches Projekt anfragen",
+      gallery: "Galerie",
+      galleryImage: "Projektbild anzeigen",
     },
     why: {
       eyebrow: "Warum wir",
@@ -172,11 +174,13 @@ export const copy = {
     },
     projects: {
       eyebrow: "Projekti",
-      title: "Područja rada s mirnim, kvalitetnim i profesionalnim dojmom.",
-      intro: "Primjeri područja rada dok se ne dodaju stvarne reference, slike i opisi projekata.",
+      title: "Aktualna suradnja i odabrana područja rada.",
+      intro: "Stvarne fotografije iz trenutačne suradnje, nadopunjene odabranim područjima rada LBL Bau.",
       ariaPrefix: "Pogledaj projekt",
       close: "Zatvori projekt",
       cta: "Zatraži sličan projekt",
+      gallery: "Galerija",
+      galleryImage: "Prikaži sliku projekta",
     },
     why: {
       eyebrow: "Zašto mi",
