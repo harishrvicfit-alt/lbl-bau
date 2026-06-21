@@ -35,7 +35,10 @@ export const stats = [
     displayValue: { de: "Erfahren", hr: "Iskusni" },
     label: { de: "Team mit Praxiserfahrung", hr: "Tim s praktičnim iskustvom" },
   },
-  { value: 50, suffix: "+", label: { de: "Abgeschlossene Projekte", hr: "Završenih projekata" } },
+  {
+    displayValue: { de: "Zahlreiche", hr: "Brojni" },
+    label: { de: "Erfolgreich abgeschlossene Projekte", hr: "Uspješno završeni projekti" },
+  },
   { value: 95, suffix: "%", label: { de: "Weiterempfehlung", hr: "Preporuka klijenata" } },
   { value: 24, suffix: "h", label: { de: "Schnelle Rückmeldung", hr: "Brz odgovor" } },
 ];
