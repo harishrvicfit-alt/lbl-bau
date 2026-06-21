@@ -31,7 +31,10 @@ export const navItems = [
 ];
 
 export const stats = [
-  { value: 10, suffix: "+", label: { de: "Jahre Erfahrung", hr: "Godina iskustva" } },
+  {
+    displayValue: { de: "Erfahren", hr: "Iskusni" },
+    label: { de: "Team mit Praxiserfahrung", hr: "Tim s praktičnim iskustvom" },
+  },
   { value: 50, suffix: "+", label: { de: "Abgeschlossene Projekte", hr: "Završenih projekata" } },
   { value: 95, suffix: "%", label: { de: "Weiterempfehlung", hr: "Preporuka klijenata" } },
   { value: 24, suffix: "h", label: { de: "Schnelle Rückmeldung", hr: "Brz odgovor" } },

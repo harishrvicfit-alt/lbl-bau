@@ -27,10 +27,16 @@ export function StatsSection() {
             >
               <CardContent>
                 <p
-                  className="font-display text-4xl font-black text-sand-500"
+                  className={`font-display font-black text-sand-500 ${
+                    "displayValue" in stat && stat.displayValue ? "text-3xl" : "text-4xl"
+                  }`}
                   style={{ color: "#e30613" }}
                 >
-                  <Counter value={stat.value} suffix={stat.suffix} />
+                  {"displayValue" in stat && stat.displayValue ? (
+                    localize(stat.displayValue, language)
+                  ) : "value" in stat ? (
+                    <Counter value={stat.value} suffix={stat.suffix} />
+                  ) : null}
                 </p>
                 <p
                   className="mt-3 text-sm font-semibold text-anthracite-800"
