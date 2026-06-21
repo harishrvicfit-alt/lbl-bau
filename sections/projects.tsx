@@ -56,7 +56,9 @@ export function ProjectsSection() {
                 src={project.image}
                 alt={localize(project.title, language)}
                 fill
-                className="object-cover transition duration-700 group-hover:scale-[1.08]"
+                className={`object-cover brightness-[0.96] contrast-[1.04] saturate-[0.9] transition duration-700 group-hover:scale-[1.06] ${
+                  index === 0 ? "object-center" : ""
+                }`}
                 sizes="(min-width: 1024px) 33vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-anthracite-950 via-anthracite-950/24 to-transparent" />
@@ -112,12 +114,21 @@ export function ProjectsSection() {
                     exit={{ opacity: 0, y: 20, scale: 0.96 }}
                     className="max-h-[calc(100svh-32px)] w-full max-w-[920px] overflow-y-auto rounded-[8px] bg-white shadow-premium"
                   >
-                    <div className="relative h-56 sm:h-[360px]">
+                    <div className="relative h-[42svh] min-h-64 max-h-[520px] overflow-hidden bg-anthracite-950 sm:h-[52svh] sm:min-h-[420px]">
+                      <Image
+                        src={selectedImage || selected.image}
+                        alt=""
+                        fill
+                        aria-hidden="true"
+                        className="scale-110 object-cover opacity-25 blur-2xl saturate-[0.8]"
+                        sizes="(min-width: 1024px) 920px, 100vw"
+                      />
                       <Image
                         src={selectedImage || selected.image}
                         alt={localize(selected.title, language)}
                         fill
-                        className="object-cover"
+                        className="object-contain p-2 brightness-[0.98] contrast-[1.02] saturate-[0.92] sm:p-3"
+                        sizes="(min-width: 1024px) 920px, 100vw"
                       />
                       <Dialog.Close asChild>
                         <button
@@ -152,16 +163,17 @@ export function ProjectsSection() {
                                 onClick={() => setSelectedImage(image)}
                                 className={`relative aspect-[4/3] overflow-hidden rounded-[6px] border-2 transition ${
                                   selectedImage === image
-                                    ? "border-ember"
-                                    : "border-transparent opacity-70 hover:opacity-100"
+                                    ? "border-ember shadow-[0_0_0_1px_rgba(224,31,45,0.2)]"
+                                    : "border-transparent opacity-65 hover:opacity-100"
                                 }`}
                                 aria-label={`${text.projects.galleryImage} ${index + 1}`}
+                                aria-pressed={selectedImage === image}
                               >
                                 <Image
                                   src={image}
                                   alt={localize(selected.title, language)}
                                   fill
-                                  className="object-cover"
+                                  className="object-cover brightness-[0.98] contrast-[1.03] saturate-[0.9] transition duration-300 hover:scale-105"
                                   sizes="(min-width: 640px) 160px, 30vw"
                                 />
                               </button>
