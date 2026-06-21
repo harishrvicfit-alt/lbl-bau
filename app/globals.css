@@ -101,3 +101,36 @@ iframe {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.premium-scrollbar {
+  scrollbar-color: rgba(23, 23, 23, 0.42) transparent;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+
+.premium-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.premium-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.premium-scrollbar::-webkit-scrollbar-thumb {
+  min-height: 48px;
+  border-radius: 999px;
+  background: rgba(23, 23, 23, 0.42);
+  transition: background-color 200ms ease;
+}
+
+.premium-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-red);
+}
+
+.premium-scrollbar::-webkit-scrollbar-button,
+.premium-scrollbar::-webkit-scrollbar-corner {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}

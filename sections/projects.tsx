@@ -152,7 +152,7 @@ export function ProjectsSection() {
                     initial={{ opacity: 0, y: 34, scale: 0.96 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 20, scale: 0.96 }}
-                    className="max-h-[calc(100svh-32px)] w-full max-w-[920px] overflow-y-auto rounded-[8px] bg-white shadow-premium"
+                    className="premium-scrollbar max-h-[calc(100svh-32px)] w-full max-w-[920px] overscroll-contain overflow-y-auto rounded-[8px] bg-white shadow-premium"
                   >
                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-anthracite-950">
                       <Image
