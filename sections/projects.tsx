@@ -1,10 +1,10 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
-import { Maximize2, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,46 @@ export function ProjectsSection() {
     setSelected(project);
     setSelectedImage(project.image);
   };
+
+  const projectGallery =
+    selected && "gallery" in selected && selected.gallery ? selected.gallery : null;
+  const selectedImageIndex = projectGallery
+    ? Math.max(projectGallery.indexOf(selectedImage), 0)
+    : 0;
+
+  const moveToImage = (direction: -1 | 1) => {
+    if (!projectGallery?.length) return;
+
+    setSelectedImage((currentImage) => {
+      const currentIndex = Math.max(projectGallery.indexOf(currentImage), 0);
+      const nextIndex = (currentIndex + direction + projectGallery.length) % projectGallery.length;
+      return projectGallery[nextIndex];
+    });
+  };
+
+  useEffect(() => {
+    if (!selected || !("gallery" in selected) || !selected.gallery?.length) return;
+
+    const gallery = selected.gallery;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+
+      event.preventDefault();
+      setSelectedImage((currentImage) => {
+        const currentIndex = Math.max(gallery.indexOf(currentImage), 0);
+
+        if (event.key === "Home") return gallery[0];
+        if (event.key === "End") return gallery[gallery.length - 1];
+
+        const direction = event.key === "ArrowLeft" ? -1 : 1;
+        const nextIndex = (currentIndex + direction + gallery.length) % gallery.length;
+        return gallery[nextIndex];
+      });
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selected]);
 
   return (
     <AnimatedSection id="projekte" className="bg-white py-24">
@@ -114,22 +154,40 @@ export function ProjectsSection() {
                     exit={{ opacity: 0, y: 20, scale: 0.96 }}
                     className="max-h-[calc(100svh-32px)] w-full max-w-[920px] overflow-y-auto rounded-[8px] bg-white shadow-premium"
                   >
-                    <div className="relative h-[42svh] min-h-64 max-h-[520px] overflow-hidden bg-anthracite-950 sm:h-[52svh] sm:min-h-[420px]">
-                      <Image
-                        src={selectedImage || selected.image}
-                        alt=""
-                        fill
-                        aria-hidden="true"
-                        className="scale-110 object-cover opacity-25 blur-2xl saturate-[0.8]"
-                        sizes="(min-width: 1024px) 920px, 100vw"
-                      />
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-anthracite-950">
                       <Image
                         src={selectedImage || selected.image}
                         alt={localize(selected.title, language)}
                         fill
-                        className="object-contain p-2 brightness-[0.98] contrast-[1.02] saturate-[0.92] sm:p-3"
+                        className="object-cover brightness-[0.98] contrast-[1.02] saturate-[0.92]"
                         sizes="(min-width: 1024px) 920px, 100vw"
                       />
+                      {projectGallery && (
+                        <>
+                          <button
+                            type="button"
+                            onClick={() => moveToImage(-1)}
+                            className="absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-anthracite-950/75 text-white shadow-lg backdrop-blur transition hover:bg-ember focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:left-4"
+                            aria-label={text.projects.previousImage}
+                          >
+                            <ChevronLeft className="h-6 w-6" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => moveToImage(1)}
+                            className="absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-anthracite-950/75 text-white shadow-lg backdrop-blur transition hover:bg-ember focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:right-4"
+                            aria-label={text.projects.nextImage}
+                          >
+                            <ChevronRight className="h-6 w-6" />
+                          </button>
+                          <span
+                            className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-anthracite-950/75 px-3 py-1 text-xs font-bold text-white backdrop-blur"
+                            aria-live="polite"
+                          >
+                            {selectedImageIndex + 1} / {projectGallery.length}
+                          </span>
+                        </>
+                      )}
                       <Dialog.Close asChild>
                         <button
                           className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-anthracite-950/70 text-white backdrop-blur"

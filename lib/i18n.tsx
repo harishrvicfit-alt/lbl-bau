@@ -71,6 +71,8 @@ export const copy = {
       cta: "Ähnliches Projekt anfragen",
       gallery: "Galerie",
       galleryImage: "Projektbild anzeigen",
+      previousImage: "Vorheriges Projektbild",
+      nextImage: "Nächstes Projektbild",
     },
     why: {
       eyebrow: "Warum wir",
@@ -181,6 +183,8 @@ export const copy = {
       cta: "Zatraži sličan projekt",
       gallery: "Galerija",
       galleryImage: "Prikaži sliku projekta",
+      previousImage: "Prethodna slika projekta",
+      nextImage: "Sljedeća slika projekta",
     },
     why: {
       eyebrow: "Zašto mi",
