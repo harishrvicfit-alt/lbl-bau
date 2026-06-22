@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const showLanguageSwitcher = false;
+const showLanguageSwitcher = true;
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const { language, setLanguage, text } = useLanguage();
