@@ -17,9 +17,6 @@ export const company = {
   website: "https://www.lblbau.de",
   officeHours: "Di. und Do. 9:00-15:30 Uhr, Mi. 9:00-17:00 Uhr",
   mapQuery: "Kühamer Str. 2, 84431 Heldenstein, Germany",
-  creditName: "H-Cyber",
-  creditUrl: "https://h-cyber.de",
-  contactFormRecipient: "info@h-cyber.de",
 };
 
 export const fullAddress = `${company.street}, ${company.postalCode} ${company.city}`;

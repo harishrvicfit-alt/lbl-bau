@@ -105,19 +105,6 @@ export default function ImpressumPage() {
               </p>
             </LegalBlock>
 
-            <LegalBlock title="Website">
-              <p>
-                Webdesign und Umsetzung:{" "}
-                <a
-                  href={company.creditUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold text-sand-700 underline-offset-4 hover:underline"
-                >
-                  {company.creditName}
-                </a>
-              </p>
-            </LegalBlock>
           </div>
         </section>
       </main>

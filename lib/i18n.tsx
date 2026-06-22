@@ -131,7 +131,6 @@ export const copy = {
       route: "Route",
       routeAria: "Adresse in Google Maps öffnen",
       rights: "Alle Rechte vorbehalten.",
-      websiteBy: "Website by",
     },
   },
   hr: {
@@ -242,7 +241,6 @@ export const copy = {
       route: "Ruta",
       routeAria: "Otvori adresu na Google Maps",
       rights: "Sva prava pridržana.",
-      websiteBy: "Izrada stranice",
     },
   },
 } as const;

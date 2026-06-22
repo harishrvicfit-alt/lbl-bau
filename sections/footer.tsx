@@ -128,14 +128,6 @@ export function Footer() {
             <a href={`mailto:${company.email}`} className="transition hover:text-white">
               Kontakt
             </a>
-            <a
-              href={company.creditUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-sand-300 transition hover:text-white"
-            >
-              {text.footer.websiteBy} {company.creditName}
-            </a>
           </div>
         </div>
       </div>

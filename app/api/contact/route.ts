@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
-const recipientEmail = process.env.CONTACT_TO_EMAIL ?? "info@h-cyber.de";
+import { company } from "@/lib/company";
+
+const recipientEmail = process.env.CONTACT_TO_EMAIL ?? company.email;
 const senderEmail =
   process.env.CONTACT_FROM_EMAIL ?? "LBL Bau Website <onboarding@resend.dev>";
 
@@ -69,7 +71,7 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({
-    message: `Danke. Ihre Anfrage wurde an ${recipientEmail} gesendet.`,
+    message: "Danke. Ihre Anfrage wurde erfolgreich gesendet.",
   });
 }
 
