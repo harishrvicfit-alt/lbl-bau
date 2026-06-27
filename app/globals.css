@@ -76,6 +76,13 @@ iframe {
   text-wrap: balance;
 }
 
+.text-safe {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+}
+
 .magnetic-shine::before {
   position: absolute;
   inset: 0;

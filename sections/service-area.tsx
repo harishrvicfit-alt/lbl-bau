@@ -16,7 +16,7 @@ export function ServiceAreaSection() {
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
             {text.serviceArea.eyebrow}
           </p>
-          <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
+          <h2 className="text-safe mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
             {text.serviceArea.title}
           </h2>
           <p className="mt-6 text-lg leading-8 text-anthracite-700">
@@ -31,10 +31,10 @@ export function ServiceAreaSection() {
                 <Building2 className="h-5 w-5" />
               </span>
               <div>
-                <h3 className="font-display text-2xl font-black text-anthracite-950">
+                <h3 className="text-safe font-display text-2xl font-black leading-tight text-anthracite-950">
                   {company.brandName}
                 </h3>
-                <p className="mt-2 leading-7 text-anthracite-700">{fullAddress}</p>
+                <p className="text-safe mt-2 leading-7 text-anthracite-700">{fullAddress}</p>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export function ServiceAreaSection() {
               <p className="mt-4 text-sm font-bold uppercase tracking-[0.18em] text-anthracite-500">
                 {text.serviceArea.call}
               </p>
-              <p className="mt-1 font-display text-2xl font-black text-anthracite-950">
+              <p className="text-safe mt-1 font-display text-2xl font-black leading-tight text-anthracite-950">
                 {company.phoneDisplay}
               </p>
             </a>
@@ -65,7 +65,7 @@ export function ServiceAreaSection() {
               <p className="mt-4 text-sm font-bold uppercase tracking-[0.18em] text-anthracite-500">
                 {text.serviceArea.location}
               </p>
-              <p className="mt-1 font-display text-2xl font-black text-anthracite-950">
+              <p className="text-safe mt-1 font-display text-2xl font-black leading-tight text-anthracite-950">
                 {company.city}
               </p>
             </a>

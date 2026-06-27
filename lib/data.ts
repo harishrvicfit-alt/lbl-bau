@@ -128,7 +128,7 @@ export const projects = [
     },
   },
   {
-    title: { de: "Renovierungsservice Wohnhaus", hr: "Renovacijski servis za kuću" },
+    title: { de: "Wohnhaus-Renovierung", hr: "Renoviranje kuće" },
     category: { de: "Projektbereich", hr: "Područje rada" },
     location: { de: "Innenausbau & Modernisierung", hr: "Unutarnji radovi i modernizacija" },
     image: "/images/project-house-renovation.jpg",

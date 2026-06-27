@@ -69,7 +69,7 @@ export function ProjectsSection() {
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
               {text.projects.eyebrow}
             </p>
-            <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
+            <h2 className="text-safe mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
               {text.projects.title}
             </h2>
           </div>
@@ -106,10 +106,10 @@ export function ProjectsSection() {
                 <span className="rounded-full bg-sand-500 px-3 py-1 text-xs font-bold text-anthracite-950">
                   {localize(project.category, language)}
                 </span>
-                <h3 className="mt-4 font-display text-2xl font-black">
+                <h3 className="text-safe mt-4 max-w-full font-display text-[1.55rem] font-black leading-tight sm:text-2xl">
                   {localize(project.title, language)}
                 </h3>
-                <p className="mt-2 text-sm text-white/70">
+                <p className="text-safe mt-2 text-sm leading-5 text-white/70">
                   {localize(project.location, language)}
                 </p>
               </div>
@@ -202,7 +202,7 @@ export function ProjectsSection() {
                         {localize(selected.category, language)} ·{" "}
                         {localize(selected.location, language)}
                       </p>
-                      <Dialog.Title className="mt-3 font-display text-3xl font-black text-anthracite-950">
+                      <Dialog.Title className="text-safe mt-3 font-display text-3xl font-black leading-tight text-anthracite-950">
                         {localize(selected.title, language)}
                       </Dialog.Title>
                       <Dialog.Description className="mt-4 leading-8 text-anthracite-700">

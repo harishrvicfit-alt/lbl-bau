@@ -27,7 +27,7 @@ export function StatsSection() {
             >
               <CardContent>
                 <p
-                  className={`font-display font-black text-sand-500 ${
+                  className={`text-safe font-display font-black leading-tight text-sand-500 ${
                     "displayValue" in stat && stat.displayValue ? "text-3xl" : "text-4xl"
                   }`}
                   style={{ color: "#e30613" }}
@@ -39,7 +39,7 @@ export function StatsSection() {
                   ) : null}
                 </p>
                 <p
-                  className="mt-3 text-sm font-semibold text-anthracite-800"
+                  className="text-safe mt-3 text-sm font-semibold text-anthracite-800"
                   style={{ color: "#2c2c28" }}
                 >
                   {localize(stat.label, language)}

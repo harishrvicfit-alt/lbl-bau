@@ -17,7 +17,7 @@ export function ServicesSection() {
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
             {text.services.eyebrow}
           </p>
-          <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
+          <h2 className="text-safe mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
             {text.services.title}
           </h2>
         </div>
@@ -44,10 +44,10 @@ export function ServicesSection() {
                   </span>
                   <ArrowUpRight className="h-5 w-5 text-anthracite-950/35 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-sand-700" />
                 </div>
-                <h3 className="font-display text-2xl font-extrabold text-anthracite-950">
+                <h3 className="text-safe font-display text-2xl font-extrabold leading-tight text-anthracite-950">
                   {localize(service.title, language)}
                 </h3>
-                <p className="mt-4 leading-7 text-anthracite-700">
+                <p className="text-safe mt-4 leading-7 text-anthracite-700">
                   {localize(service.description, language)}
                 </p>
               </div>

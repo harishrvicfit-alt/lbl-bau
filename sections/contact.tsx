@@ -99,7 +99,7 @@ export function ContactSection() {
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-[8px] bg-anthracite-950 text-sand-300">
                   <item.icon className="h-5 w-5" />
                 </span>
-                <span className="font-semibold text-anthracite-800">{item.label}</span>
+                <span className="text-safe font-semibold text-anthracite-800">{item.label}</span>
               </a>
             ))}
           </div>

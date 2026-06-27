@@ -51,10 +51,10 @@ export function AboutSection() {
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-300">
             {text.about.eyebrow}
           </p>
-          <h2 className="mt-4 font-display text-4xl font-black leading-tight sm:text-5xl">
+          <h2 className="text-safe mt-4 font-display text-4xl font-black leading-tight sm:text-5xl">
             {text.about.title}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-white/72">
+          <p className="text-safe mt-6 text-lg leading-8 text-white/72">
             {text.about.intro}
           </p>
 
@@ -66,16 +66,16 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: index * 0.08 }}
-                className="flex gap-4 rounded-[8px] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-xl"
+                className="flex w-full max-w-full gap-4 rounded-[8px] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-xl"
               >
                 <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-sand-400" />
-                <span className="text-white/78">{item}</span>
+                <span className="text-safe min-w-0 text-white/78">{item}</span>
               </motion.div>
             ))}
           </div>
 
           <div className="mt-10 border-l-2 border-sand-500 pl-6">
-            <p className="font-display text-2xl font-bold">
+            <p className="text-safe font-display text-2xl font-bold leading-tight">
               {text.about.quote}
             </p>
             <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/50">

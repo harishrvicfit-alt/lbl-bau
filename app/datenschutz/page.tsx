@@ -163,7 +163,7 @@ function LegalBlock({
 }) {
   return (
     <section className="border-b border-anthracite-950/10 pb-6 last:border-b-0 last:pb-0">
-      <h2 className="font-display text-2xl font-black text-anthracite-950">{title}</h2>
+      <h2 className="text-safe font-display text-2xl font-black leading-tight text-anthracite-950">{title}</h2>
       <div className="mt-3 space-y-3 leading-8 text-anthracite-700">{children}</div>
     </section>
   );

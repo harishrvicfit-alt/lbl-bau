@@ -16,7 +16,7 @@ export function WhyChooseUsSection() {
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand-700">
             {text.why.eyebrow}
           </p>
-          <h2 className="mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
+          <h2 className="text-safe mt-4 font-display text-4xl font-black leading-tight text-anthracite-950 sm:text-5xl">
             {text.why.title}
           </h2>
         </div>
@@ -33,7 +33,7 @@ export function WhyChooseUsSection() {
             >
               <div className="absolute inset-y-0 left-0 w-1 bg-sand-500" />
               <benefit.icon className="h-7 w-7 text-sand-700 transition duration-300 group-hover:scale-110" />
-              <h3 className="mt-9 font-display text-2xl font-black text-anthracite-950">
+              <h3 className="text-safe mt-9 font-display text-2xl font-black leading-tight text-anthracite-950">
                 {localize(benefit.title, language)}
               </h3>
             </motion.div>
