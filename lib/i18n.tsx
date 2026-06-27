@@ -249,15 +249,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("de");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("lbl-bau-language");
-    if (stored === "hr" || stored === "de") {
-      setLanguageState(stored);
-    }
+    window.localStorage.removeItem("lbl-bau-language");
   }, []);
 
   const setLanguage = (nextLanguage: Language) => {
     setLanguageState(nextLanguage);
-    window.localStorage.setItem("lbl-bau-language", nextLanguage);
   };
 
   useEffect(() => {
