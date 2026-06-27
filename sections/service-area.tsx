@@ -66,7 +66,7 @@ export function ServiceAreaSection() {
                 {text.serviceArea.location}
               </p>
               <p className="mt-1 font-display text-2xl font-black text-anthracite-950">
-                Heldenstein
+                {company.city}
               </p>
             </a>
           </div>

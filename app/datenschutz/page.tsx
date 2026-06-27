@@ -51,6 +51,11 @@ export default function DatenschutzPage() {
                 <br />
                 {company.postalCode} {company.city}, {company.country}
                 <br />
+                Telefon:{" "}
+                <a className="underline-offset-4 hover:underline" href={`tel:${company.phoneHref}`}>
+                  {company.phoneDisplay}
+                </a>
+                <br />
                 E-Mail:{" "}
                 <a className="underline-offset-4 hover:underline" href={`mailto:${company.email}`}>
                   {company.email}

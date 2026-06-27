@@ -31,7 +31,7 @@ export default function Home() {
         addressCountry: "DE",
       },
       areaServed: [
-        "Heldenstein",
+        "Neumarkt-Sankt Veit",
         "Waldkraiburg",
         "Mühldorf am Inn",
         "Ampfing",
@@ -40,7 +40,7 @@ export default function Home() {
         "Bayern",
       ],
       description:
-        "Regionaler Baupartner für Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten in Heldenstein, Waldkraiburg und Mühldorf am Inn.",
+        "Regionaler Baupartner für Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten in Neumarkt-Sankt Veit, Waldkraiburg und Mühldorf am Inn.",
       founder: company.owner,
       telephone: company.phoneHref,
       email: company.email,
@@ -56,20 +56,6 @@ export default function Home() {
         areaServed: "DE-BY",
         availableLanguage: ["de"],
       },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Tuesday", "Thursday"],
-          opens: "09:00",
-          closes: "15:30",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Wednesday",
-          opens: "09:00",
-          closes: "17:00",
-        },
-      ],
       makesOffer: {
         "@type": "OfferCatalog",
         name: "Leistungsbereiche",
@@ -86,7 +72,7 @@ export default function Home() {
           itemOffered: {
             "@type": "Service",
             name,
-            areaServed: "Heldenstein, Waldkraiburg und Mühldorf am Inn",
+            areaServed: "Neumarkt-Sankt Veit, Waldkraiburg und Mühldorf am Inn",
             provider: {
               "@id": `${company.website}/#business`,
             },

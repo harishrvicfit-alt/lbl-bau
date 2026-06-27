@@ -80,12 +80,12 @@ export const copy = {
     },
     serviceArea: {
       eyebrow: "Regional vor Ort",
-      title: "Ausbau, Renovierung und Bauunterstützung in Heldenstein, Waldkraiburg und Umgebung.",
+      title: "Ausbau, Renovierung und Bauunterstützung in Neumarkt-Sankt Veit, Waldkraiburg und Umgebung.",
       intro:
         "LBL Bau unterstützt private und gewerbliche Kunden in der Region mit Renovierungsservice, Trockenbau, Innenausbau sowie vorbereitenden und unterstützenden Arbeiten bei Bauprojekten. Bei spezialisierten Fachgewerken erfolgt die Umsetzung im passenden Rahmen mit verantwortlichen Fachbetrieben und Projektpartnern.",
       call: "Direkt anrufen",
       location: "Standort",
-      areas: ["Heldenstein", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Landkreis Mühldorf"],
+      areas: ["Neumarkt-Sankt Veit", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Landkreis Mühldorf"],
     },
     testimonials: {
       eyebrow: "Kundenstimmen",
@@ -191,12 +191,12 @@ export const copy = {
     },
     serviceArea: {
       eyebrow: "Regionalno na terenu",
-      title: "Unutarnji radovi, renoviranje i građevinska podrška u Heldensteinu, Waldkraiburgu i okolini.",
+      title: "Unutarnji radovi, renoviranje i građevinska podrška u Neumarkt-Sankt Veitu, Waldkraiburgu i okolini.",
       intro:
         "LBL Bau podržava privatne i poslovne klijente u regiji kroz renovacijski servis, suhu gradnju, unutarnje radove te pripremne i pomoćne radove na građevinskim projektima. Kod specijaliziranih stručnih radova radimo u odgovarajućem okviru s partnerskim firmama.",
       call: "Direktno nazovi",
       location: "Lokacija",
-      areas: ["Heldenstein", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Okrug Mühldorf"],
+      areas: ["Neumarkt-Sankt Veit", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Okrug Mühldorf"],
     },
     testimonials: {
       eyebrow: "Iskustva klijenata",

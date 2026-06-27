@@ -62,8 +62,6 @@ export default function ImpressumPage() {
                   {company.phoneDisplay}
                 </a>
                 <br />
-                Fax: {company.faxDisplay}
-                <br />
                 E-Mail:{" "}
                 <a className="underline-offset-4 hover:underline" href={`mailto:${company.email}`}>
                   {company.email}
@@ -80,6 +78,14 @@ export default function ImpressumPage() {
               <p>{company.officeHours}</p>
             </LegalBlock>
 
+            <LegalBlock title="Steuerliche Angaben">
+              <p>
+                Eine Umsatzsteuer-Identifikationsnummer wird nur angegeben,
+                sofern sie für das Unternehmen erteilt wurde und
+                veröffentlichungspflichtig ist.
+              </p>
+            </LegalBlock>
+
             <LegalBlock title="Verantwortlich für den Inhalt">
               <p>
                 Verantwortlich für die Inhalte dieser Website ist {company.owner}
@@ -94,6 +100,15 @@ export default function ImpressumPage() {
                 dennoch keine Gewähr übernommen werden. Verbindliche Angebote
                 und Projektinformationen erhalten Sie direkt nach persönlicher
                 Abstimmung.
+              </p>
+            </LegalBlock>
+
+            <LegalBlock title="Haftung für Links">
+              <p>
+                Diese Website kann Links zu externen Websites Dritter enthalten.
+                Auf deren Inhalte haben wir keinen Einfluss. Für fremde Inhalte
+                ist stets der jeweilige Anbieter oder Betreiber der verlinkten
+                Seiten verantwortlich.
               </p>
             </LegalBlock>
 

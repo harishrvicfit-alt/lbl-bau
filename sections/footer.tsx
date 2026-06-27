@@ -94,7 +94,6 @@ export function Footer() {
             <div className="space-y-3 text-sm text-white/60">
               <p>{fullAddress}</p>
               <p>{company.phoneDisplay}</p>
-              <p>Fax {company.faxDisplay}</p>
               <p>{company.email}</p>
               <p>{company.officeHours}</p>
             </div>

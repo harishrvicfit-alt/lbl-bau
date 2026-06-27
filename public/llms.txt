@@ -1,11 +1,11 @@
 # LBL Bau
 
-LBL Bau is a regional construction and renovation company based in Heldenstein, Bavaria, Germany.
+LBL Bau is a regional construction and renovation company based in Neumarkt-Sankt Veit, Bavaria, Germany.
 
 Website: https://www.lblbau.de
 Phone: 0173 4593296
-Email: kontakt@lbl-bau.de
-Address: Kühamer Str. 2, 84431 Heldenstein, Germany
+Email: info@lbl-bau.de
+Address: Adlsteiner Str. 9A, 84494 Neumarkt-Sankt Veit, Germany
 
 Core services:
 - Renovierungsservice
@@ -16,7 +16,7 @@ Core services:
 - Neubau-Projektunterstützung as a local partner on selected works
 
 Service area:
-- Heldenstein
+- Neumarkt-Sankt Veit
 - Waldkraiburg
 - Mühldorf am Inn
 - Ampfing
