@@ -1,7 +1,6 @@
 import {
   Award,
   BadgeCheck,
-  BrickWall,
   Building2,
   CalendarCheck,
   Hammer,
@@ -45,50 +44,50 @@ export const stats = [
 
 export const services = [
   {
-    title: { de: "Renovierung", hr: "Renoviranje" },
+    title: { de: "Renovierungsservice", hr: "Renovacijski servis" },
     description: {
-      de: "Saubere Modernisierung von Wohnungen, Häusern und Gewerbeflächen mit klarer Planung.",
-      hr: "Uredna modernizacija stanova, kuća i poslovnih prostora uz jasno planiranje.",
+      de: "Klar abgegrenzte Modernisierungs-, Rückbau- und Vorbereitungsarbeiten mit sauberer Abstimmung.",
+      hr: "Jasno dogovoreni radovi modernizacije, uklanjanja i pripreme uz urednu komunikaciju.",
     },
     icon: Hammer,
   },
   {
-    title: { de: "Innenausbau", hr: "Unutarnji radovi" },
+    title: { de: "Trockenbau & Ausbau", hr: "Suha gradnja i unutarnji radovi" },
     description: {
-      de: "Trockenbau, Böden, Wände und detailgenaue Innenarbeiten aus einer Hand.",
-      hr: "Suha gradnja, podovi, zidovi i precizni unutarnji radovi iz jedne ruke.",
+      de: "Leichte Trennwände, Decken, Verkleidungen und saubere Ausbauarbeiten im Innenbereich.",
+      hr: "Lagani pregradni zidovi, stropovi, obloge i uredni unutarnji radovi.",
     },
     icon: Layers3,
   },
   {
-    title: { de: "Fassadenarbeiten", hr: "Fasadni radovi" },
+    title: { de: "Montage & Finish", hr: "Montaža i završni radovi" },
     description: {
-      de: "Moderne Fassadenlösungen, Putzarbeiten und energetische Verbesserungen.",
-      hr: "Moderna fasadna rješenja, žbukanje i energetska poboljšanja objekata.",
+      de: "Montage genormter Bauteile, saubere Anschlussdetails und ergänzende Arbeiten bis zur Übergabe.",
+      hr: "Montaža standardiziranih građevinskih elemenata, uredni spojevi i završni detalji do predaje.",
+    },
+    icon: Ruler,
+  },
+  {
+    title: { de: "Fassadenbegleitung", hr: "Podrška kod fasade" },
+    description: {
+      de: "Vorbereitende und unterstützende Arbeiten rund um Fassadenprojekte in Abstimmung mit Fachbetrieben.",
+      hr: "Pripremni i pomoćni radovi oko fasadnih projekata u dogovoru sa stručnim izvođačima.",
     },
     icon: Paintbrush,
   },
   {
-    title: { de: "Trockenbau", hr: "Suha gradnja" },
+    title: { de: "Außenbereich-Unterstützung", hr: "Podrška za vanjske radove" },
     description: {
-      de: "Flexible Raumlösungen, Decken, Trennwände und präzise Ausführung.",
-      hr: "Fleksibilna prostorna rješenja, stropovi, pregradni zidovi i precizna izvedba.",
-    },
-    icon: BrickWall,
-  },
-  {
-    title: { de: "Pflasterarbeiten", hr: "Popločavanje" },
-    description: {
-      de: "Einfahrten, Wege und Außenbereiche mit langlebigem, hochwertigem Finish.",
-      hr: "Prilazi, staze i vanjske površine s dugotrajnim i kvalitetnim završetkom.",
+      de: "Zuarbeit, Vorbereitung und Unterstützung bei Außenflächen, Wegen und Baustellenlogistik.",
+      hr: "Pomoć, priprema i podrška kod vanjskih površina, staza i organizacije gradilišta.",
     },
     icon: Trees,
   },
   {
-    title: { de: "Hausbau", hr: "Gradnja kuća" },
+    title: { de: "Neubau-Projektunterstützung", hr: "Podrška kod novogradnje" },
     description: {
-      de: "Kleinere bis mittlere Bauprojekte mit verlässlicher Koordination vor Ort.",
-      hr: "Manji do srednji građevinski projekti s pouzdanom koordinacijom na terenu.",
+      de: "Verlässliche Mitarbeit bei Neubauprojekten als ergänzender Partner vor Ort.",
+      hr: "Pouzdana suradnja na projektima novogradnje kao dodatni partner na terenu.",
     },
     icon: Home,
   },
@@ -124,28 +123,28 @@ export const projects = [
       "/images/projects/doppelhaus-neubau-baufortschritt.webp",
     ],
     description: {
-      de: "LBL Bau unterstützt dieses laufende Doppelhaus-Neubauprojekt als zuverlässiger Partner bei ausgewählten Bauarbeiten vor Ort. Die Aufnahmen dokumentieren den aktuellen Rohbau, das Mauerwerk, die Raumaufteilung und das Treppenhaus. Projektleitung und Gesamtleistung liegen bei den jeweils verantwortlichen Partnern.",
-      hr: "LBL Bau na ovoj novogradnji dvojne kuće sudjeluje kao pouzdan partner pri odabranim građevinskim radovima. Fotografije prikazuju aktualnu fazu rohbaua, zidarske radove, raspored prostorija i stubište. Vođenje projekta i ukupna izvedba pripadaju odgovornim partnerskim izvođačima.",
+      de: "LBL Bau unterstützt dieses laufende Doppelhaus-Neubauprojekt als zuverlässiger Partner bei ausgewählten Arbeiten vor Ort. Die Aufnahmen dokumentieren den aktuellen Baufortschritt, die Raumaufteilung und das Treppenhaus. Projektleitung, spezialisierte Fachgewerke und Gesamtkoordination liegen bei den jeweils verantwortlichen Partnern.",
+      hr: "LBL Bau na ovoj novogradnji dvojne kuće sudjeluje kao pouzdan partner pri odabranim radovima na terenu. Fotografije prikazuju trenutačni napredak gradnje, raspored prostorija i stubište. Vođenje projekta, specijalizirani stručni radovi i ukupna koordinacija pripadaju odgovornim partnerskim izvođačima.",
     },
   },
   {
-    title: { de: "Sanierung Einfamilienhaus", hr: "Sanacija obiteljske kuće" },
+    title: { de: "Renovierungsservice Wohnhaus", hr: "Renovacijski servis za kuću" },
     category: { de: "Projektbereich", hr: "Područje rada" },
-    location: { de: "Renovierung & Modernisierung", hr: "Renoviranje i modernizacija" },
+    location: { de: "Innenausbau & Modernisierung", hr: "Unutarnji radovi i modernizacija" },
     image: "/images/project-house-renovation.jpg",
     description: {
-      de: "Beispielhafter Leistungsbereich für die Modernisierung von Wohnhäusern: Oberflächen, Details, Koordination und saubere Übergabe aus einer Hand.",
-      hr: "Primjer područja rada za modernizaciju obiteljskih kuća: površine, detalji, koordinacija i uredna predaja iz jedne ruke.",
+      de: "Beispielhafter Leistungsbereich für Renovierungs- und Ausbauarbeiten: Vorbereitung, Montage, Details und sauberes Finish. Spezialisierte Fachgewerke werden bei Bedarf mit verantwortlichen Partnern abgestimmt.",
+      hr: "Primjer područja rada za renovacijske i unutarnje radove: priprema, montaža, detalji i uredan završetak. Specijalizirani stručni radovi po potrebi se usklađuju s odgovornim partnerima.",
     },
   },
   {
-    title: { de: "Moderne Fassadengestaltung", hr: "Moderno uređenje fasade" },
+    title: { de: "Fassadenprojekt-Unterstützung", hr: "Podrška kod fasadnog projekta" },
     category: { de: "Projektbereich", hr: "Područje rada" },
-    location: { de: "Fassade & Putzarbeiten", hr: "Fasada i žbukanje" },
+    location: { de: "Vorbereitung & Zuarbeit", hr: "Priprema i pomoćni radovi" },
     image: "/images/project-modern-facade.jpg",
     description: {
-      de: "Leistungsbereich für Fassadenarbeiten mit klarer Optik, langlebigen Materialien und präzisen Anschlussdetails.",
-      hr: "Područje rada za fasadne radove s čistim izgledom, dugotrajnim materijalima i preciznim detaljima spojeva.",
+      de: "Unterstützende Leistungen bei Fassadenprojekten: Vorbereitung, Materiallogistik, Zuarbeit und Detailabstimmung im Zusammenspiel mit verantwortlichen Fachbetrieben.",
+      hr: "Pomoćne usluge kod fasadnih projekata: priprema, logistika materijala, pomoćni radovi i usklađivanje detalja zajedno s odgovornim stručnim izvođačima.",
     },
   },
   {
@@ -154,18 +153,18 @@ export const projects = [
     location: { de: "Trockenbau & Innenarbeiten", hr: "Suha gradnja i unutarnji radovi" },
     image: "/images/project-interior-work.jpg",
     description: {
-      de: "Leistungsbereich für hochwertigen Innenausbau mit Trockenbau, Böden, Wandflächen und sauberem Finish.",
-      hr: "Područje rada za kvalitetne unutarnje radove sa suhom gradnjom, podovima, zidnim površinama i urednim završetkom.",
+      de: "Leistungsbereich für Innenausbau mit Trockenbau, Montagearbeiten, Wand- und Deckenverkleidungen sowie sauberem Finish.",
+      hr: "Područje rada za unutarnje radove sa suhom gradnjom, montažom, zidnim i stropnim oblogama te urednim završetkom.",
     },
   },
   {
-    title: { de: "Einfahrt & Außenanlage", hr: "Prilaz i vanjsko uređenje" },
+    title: { de: "Außenbereich-Projektunterstützung", hr: "Podrška kod vanjskih radova" },
     category: { de: "Projektbereich", hr: "Područje rada" },
-    location: { de: "Pflaster & Außenbereich", hr: "Popločavanje i vanjski prostor" },
+    location: { de: "Vorbereitung & Unterstützung", hr: "Priprema i podrška" },
     image: "/images/project-driveway.jpg",
     description: {
-      de: "Leistungsbereich für Einfahrten, Wege und Außenflächen mit robustem Aufbau, klaren Kanten und gepflegter Gesamtwirkung.",
-      hr: "Područje rada za prilaze, staze i vanjske površine s robusnom podlogom, čistim rubovima i urednim ukupnim dojmom.",
+      de: "Unterstützende und vorbereitende Arbeiten bei Außenflächen, Wegen und Baustellenumfeld. Spezialisierte Arbeiten an Wegen und Belägen werden mit verantwortlichen Fachpartnern umgesetzt.",
+      hr: "Pomoćni i pripremni radovi kod vanjskih površina, staza i okruženja gradilišta. Specijalizirani vanjski radovi provode se s odgovornim partnerima.",
     },
   },
 ];
@@ -175,7 +174,7 @@ export const testimonials = [
     name: "Thomas R.",
     place: { de: "Oberbayern", hr: "Gornja Bavarska" },
     text: {
-      de: "Sehr saubere Arbeit, klare Kommunikation und der Zeitplan wurde eingehalten. Genau so stellt man sich einen Handwerksbetrieb vor.",
+      de: "Sehr saubere Arbeit, klare Kommunikation und der Zeitplan wurde eingehalten. Genau so stellt man sich einen zuverlässigen Baubetrieb vor.",
       hr: "Vrlo uredan rad, jasna komunikacija i poštovan dogovoreni rok. Upravo tako treba izgledati ozbiljan obrt.",
     },
     stars: 5,
@@ -184,8 +183,8 @@ export const testimonials = [
     name: "Martina K.",
     place: { de: "Landkreis Mühldorf", hr: "Okrug Mühldorf" },
     text: {
-      de: "Unsere Renovierung lief ruhig, zuverlässig und mit viel Liebe zum Detail. Das Ergebnis wirkt deutlich hochwertiger als erwartet.",
-      hr: "Naše renoviranje prošlo je mirno, pouzdano i s puno pažnje prema detaljima. Rezultat izgleda kvalitetnije nego što smo očekivali.",
+      de: "Die Unterstützung bei unserem Umbau lief ruhig, zuverlässig und mit viel Liebe zum Detail. Das Ergebnis wirkt deutlich hochwertiger als erwartet.",
+      hr: "Podrška pri našem preuređenju prošla je mirno, pouzdano i s puno pažnje prema detaljima. Rezultat izgleda kvalitetnije nego što smo očekivali.",
     },
     stars: 5,
   },
@@ -204,5 +203,5 @@ export const trustPoints = [
   { icon: BadgeCheck, label: { de: "Deutsche Qualitätsstandards", hr: "Njemački standardi kvalitete" } },
   { icon: Users, label: { de: "Persönlicher Ansprechpartner", hr: "Osobni kontakt" } },
   { icon: Building2, label: { de: "Regional in Oberbayern", hr: "Regionalno u Bavarskoj" } },
-  { icon: Star, label: { de: "Hochwertige Ausführung", hr: "Kvalitetna izvedba" } },
+  { icon: Star, label: { de: "Saubere Umsetzung", hr: "Uredna izvedba" } },
 ];

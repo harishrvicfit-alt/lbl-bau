@@ -25,7 +25,7 @@ export const copy = {
   de: {
     langLabel: "Deutsch",
     loading: "Qualität wird geladen",
-    headerTagline: "Bau & Renovierung",
+    headerTagline: "Ausbau & Renovierung",
     cta: {
       request: "Angebot anfragen",
       call: "Jetzt anrufen",
@@ -37,7 +37,7 @@ export const copy = {
       badge: "Premium Baupartner: LBL Bau",
       headline: "LBL Bau. Modern. Präzise. Zuverlässig.",
       intro:
-        "Hochwertige Renovierungen, Innenausbau, Fassaden und kleinere bis mittlere Bauprojekte mit sauberer Planung und präziser Ausführung.",
+        "Hochwertiger Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten mit sauberer Planung und präziser Ausführung.",
       primary: "Angebot anfragen",
       secondary: "Projekte ansehen",
       consulting: "Beratung",
@@ -45,7 +45,7 @@ export const copy = {
     },
     services: {
       eyebrow: "Leistungen",
-      title: "Hochwertige Bauleistungen für moderne Wohn- und Arbeitsräume.",
+      title: "Saubere Ausbauleistungen und verlässliche Unterstützung bei Bauprojekten.",
       ariaSuffix: "anfragen",
     },
     about: {
@@ -57,8 +57,8 @@ export const copy = {
       signature: "Geschäftsführung",
       timeline: [
         "Persönliche Beratung und klare Projektplanung",
-        "Saubere Koordination der Gewerke und Materialien",
-        "Präzise Ausführung nach deutschem Qualitätsanspruch",
+        "Saubere Abstimmung mit Kunden, Partnern und Fachbetrieben",
+        "Präzise Ausführung im vereinbarten Leistungsbereich",
         "Verlässliche Übergabe mit sauberem Finish",
       ],
     },
@@ -80,9 +80,9 @@ export const copy = {
     },
     serviceArea: {
       eyebrow: "Regional vor Ort",
-      title: "Bauleistungen in Heldenstein, Waldkraiburg und Umgebung.",
+      title: "Ausbau, Renovierung und Bauunterstützung in Heldenstein, Waldkraiburg und Umgebung.",
       intro:
-        "LBL Bau unterstützt private und gewerbliche Kunden in der Region mit Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und kleineren bis mittleren Bauprojekten. Kurze Wege, klare Abstimmung und eine zuverlässige Ausführung stehen dabei im Mittelpunkt.",
+        "LBL Bau unterstützt private und gewerbliche Kunden in der Region mit Renovierungsservice, Trockenbau, Innenausbau sowie vorbereitenden und unterstützenden Arbeiten bei Bauprojekten. Bei spezialisierten Fachgewerken erfolgt die Umsetzung im passenden Rahmen mit verantwortlichen Fachbetrieben und Projektpartnern.",
       call: "Direkt anrufen",
       location: "Standort",
       areas: ["Heldenstein", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Landkreis Mühldorf"],
@@ -110,7 +110,7 @@ export const copy = {
       name: "Name",
       contactMethod: "Telefon oder E-Mail",
       projectType: "Projektart",
-      projectPlaceholder: "Renovierung, Fassade, Innenausbau ...",
+      projectPlaceholder: "Trockenbau, Renovierung, Bauunterstützung ...",
       message: "Nachricht",
       sending: "Wird gesendet ...",
       submit: "Anfrage senden",
@@ -122,9 +122,9 @@ export const copy = {
       route: "Route extern öffnen",
     },
     footer: {
-      tagline: "Premium Bau & Renovierung",
+      tagline: "Premium Ausbau & Renovierung",
       intro:
-        "Moderne Bauleistungen, Renovierungen und hochwertige Ausführung für private und gewerbliche Projekte in Bayern.",
+        "Moderne Ausbauleistungen, Renovierungsservice und verlässliche Unterstützung für private und gewerbliche Projekte in Bayern.",
       quickLinks: "Quick Links",
       contact: "Kontakt",
       call: "Anrufen",
@@ -136,7 +136,7 @@ export const copy = {
   hr: {
     langLabel: "Hrvatski",
     loading: "Kvaliteta se učitava",
-    headerTagline: "Gradnja i renoviranje",
+    headerTagline: "Unutarnji radovi i renoviranje",
     cta: {
       request: "Zatraži ponudu",
       call: "Nazovi sada",
@@ -148,7 +148,7 @@ export const copy = {
       badge: "Premium građevinski partner: LBL Bau",
       headline: "LBL Bau. Moderno. Precizno. Pouzdano.",
       intro:
-        "Kvalitetna renoviranja, unutarnji radovi, fasade i manji do srednji građevinski projekti uz uredno planiranje i preciznu izvedbu.",
+        "Kvalitetan renovacijski servis, suha gradnja, unutarnji radovi i podrška na partnerskim građevinskim projektima uz uredno planiranje i preciznu izvedbu.",
       primary: "Zatraži ponudu",
       secondary: "Pogledaj projekte",
       consulting: "Savjetovanje",
@@ -156,7 +156,7 @@ export const copy = {
     },
     services: {
       eyebrow: "Usluge",
-      title: "Kvalitetne građevinske usluge za moderne stambene i poslovne prostore.",
+      title: "Uredni unutarnji radovi i pouzdana podrška na građevinskim projektima.",
       ariaSuffix: "zatraži",
     },
     about: {
@@ -168,8 +168,8 @@ export const copy = {
       signature: "Vodstvo firme",
       timeline: [
         "Osobno savjetovanje i jasno planiranje projekta",
-        "Uredna koordinacija radova i materijala",
-        "Precizna izvedba prema njemačkim standardima kvalitete",
+        "Uredan dogovor s klijentima, partnerima i stručnim izvođačima",
+        "Precizna izvedba u dogovorenom području rada",
         "Pouzdana predaja s čistim završetkom",
       ],
     },
@@ -191,9 +191,9 @@ export const copy = {
     },
     serviceArea: {
       eyebrow: "Regionalno na terenu",
-      title: "Građevinske usluge u Heldensteinu, Waldkraiburgu i okolini.",
+      title: "Unutarnji radovi, renoviranje i građevinska podrška u Heldensteinu, Waldkraiburgu i okolini.",
       intro:
-        "LBL Bau podržava privatne i poslovne klijente u regiji kroz renoviranje, unutarnje radove, fasade, suhu gradnju, popločavanje i manje do srednje građevinske projekte. Kratki putevi, jasni dogovori i pouzdana izvedba su u središtu našeg rada.",
+        "LBL Bau podržava privatne i poslovne klijente u regiji kroz renovacijski servis, suhu gradnju, unutarnje radove te pripremne i pomoćne radove na građevinskim projektima. Kod specijaliziranih stručnih radova radimo u odgovarajućem okviru s partnerskim firmama.",
       call: "Direktno nazovi",
       location: "Lokacija",
       areas: ["Heldenstein", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Okrug Mühldorf"],
@@ -220,7 +220,7 @@ export const copy = {
       name: "Ime",
       contactMethod: "Telefon ili e-mail",
       projectType: "Vrsta projekta",
-      projectPlaceholder: "Renoviranje, fasada, unutarnji radovi ...",
+      projectPlaceholder: "Suha gradnja, renoviranje, građevinska podrška ...",
       message: "Poruka",
       sending: "Šalje se ...",
       submit: "Pošalji upit",
@@ -232,9 +232,9 @@ export const copy = {
       route: "Otvori rutu izvana",
     },
     footer: {
-      tagline: "Premium gradnja i renoviranje",
+      tagline: "Premium unutarnji radovi i renoviranje",
       intro:
-        "Moderne građevinske usluge, renoviranja i kvalitetna izvedba za privatne i poslovne projekte u Bavarskoj.",
+        "Moderni unutarnji radovi, renovacijski servis i pouzdana podrška za privatne i poslovne projekte u Bavarskoj.",
       quickLinks: "Brzi linkovi",
       contact: "Kontakt",
       call: "Nazovi",

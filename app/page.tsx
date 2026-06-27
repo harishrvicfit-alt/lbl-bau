@@ -40,7 +40,7 @@ export default function Home() {
         "Bayern",
       ],
       description:
-        "Regionaler Baupartner für Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und Hausbau in Heldenstein, Waldkraiburg und Mühldorf am Inn.",
+        "Regionaler Baupartner für Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten in Heldenstein, Waldkraiburg und Mühldorf am Inn.",
       founder: company.owner,
       telephone: company.phoneHref,
       email: company.email,
@@ -72,14 +72,15 @@ export default function Home() {
       ],
       makesOffer: {
         "@type": "OfferCatalog",
-        name: "Bauleistungen",
+        name: "Leistungsbereiche",
         itemListElement: [
-          "Renovierung",
-          "Innenausbau",
-          "Fassadenarbeiten",
           "Trockenbau",
-          "Pflasterarbeiten",
-          "Hausbau",
+          "Innenausbau",
+          "Renovierungsservice",
+          "Montage und Finish",
+          "Fassadenbegleitung",
+          "Außenbereich-Unterstützung",
+          "Neubau-Projektunterstützung",
         ].map((name) => ({
           "@type": "Offer",
           itemOffered: {

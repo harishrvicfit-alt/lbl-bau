@@ -8,11 +8,11 @@ const siteUrl = company.website;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "LBL Bau | Renovierung, Innenausbau & Hausbau",
+    default: "LBL Bau | Renovierung, Trockenbau & Projektunterstützung",
     template: "%s | LBL Bau",
   },
   description:
-    "LBL Bau in Heldenstein: Renovierung, Innenausbau, Fassadenarbeiten, Trockenbau, Pflasterarbeiten und Hausbau in Waldkraiburg und Mühldorf.",
+    "LBL Bau in Heldenstein: Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten in Waldkraiburg und Mühldorf.",
   keywords: [
     "LBL Bau",
     "LBL Bau Heldenstein",
@@ -25,15 +25,14 @@ export const metadata: Metadata = {
     "Renovierung Waldkraiburg",
     "Innenausbau Heldenstein",
     "Trockenbau Heldenstein",
-    "Fassadenarbeiten Heldenstein",
-    "Pflasterarbeiten Mühldorf am Inn",
+    "Bauhelfer Heldenstein",
+    "Projektunterstützung Bau Waldkraiburg",
     "Baufirma Bayern",
     "Renovierung Bayern",
     "Innenausbau Bayern",
-    "Fassadenarbeiten",
     "Trockenbau",
-    "Pflasterarbeiten",
-    "Hausbau",
+    "Bauprojekt Unterstützung",
+    "Ausbauarbeiten",
   ],
   authors: [{ name: company.brandName, url: siteUrl }],
   creator: company.brandName,
@@ -41,9 +40,9 @@ export const metadata: Metadata = {
   applicationName: company.brandName,
   category: "construction",
   openGraph: {
-    title: "LBL Bau | Bauunternehmen in Heldenstein",
+    title: "LBL Bau | Baupartner in Heldenstein",
     description:
-      "Qualität am Bau. Modern. Präzise. Zuverlässig. Ihr Partner für hochwertige Bau- und Renovierungsarbeiten in Heldenstein, Waldkraiburg und Mühldorf am Inn.",
+      "Qualität am Bau. Modern. Präzise. Zuverlässig. Ihr Partner für Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten in Heldenstein, Waldkraiburg und Mühldorf am Inn.",
     url: siteUrl,
     siteName: "LBL Bau",
     locale: "de_DE",
@@ -62,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LBL Bau | Renovierung, Innenausbau & Hausbau",
+    title: "LBL Bau | Renovierung, Trockenbau & Projektunterstützung",
     description:
-      "Regionaler Baupartner für hochwertige Renovierung, Innenausbau, Fassadenarbeiten und Pflasterarbeiten in Heldenstein und Umgebung.",
+      "Regionaler Baupartner für Renovierungsservice, Trockenbau, Innenausbau und unterstützende Arbeiten bei Bauprojekten in Heldenstein und Umgebung.",
     images: ["/images/og-cover.svg"],
   },
   icons: {
