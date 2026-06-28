@@ -116,11 +116,8 @@ export const projects = [
     image: "/images/projects/doppelhaus-geruest-aussenansicht.webp",
     gallery: [
       "/images/projects/doppelhaus-geruest-aussenansicht.webp",
-      "/images/projects/doppelhaus-geruest-strassenansicht.webp",
       "/images/projects/doppelhaus-bauphase-aussen-mauerwerk.webp",
-      "/images/projects/doppelhaus-bauphase-eingang-detail.webp",
       "/images/projects/doppelhaus-deckenbewehrung-uebersicht.webp",
-      "/images/projects/doppelhaus-deckenbewehrung-arbeiten.webp",
       "/images/projects/doppelhaus-dachvorbereitung-abend.webp",
       "/images/projects/doppelhaus-dachflaeche-detail.webp",
       "/images/projects/doppelhaus-neubau-innenausbau.webp",
