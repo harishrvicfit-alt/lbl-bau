@@ -4,7 +4,7 @@ export const company = {
   legalForm: "Einzelunternehmen",
   projectSlug: "lbl-bau",
   logo: "/images/lbl-bau-logo.png",
-  owner: "Zoran Kazava",
+  owner: "Zoran Katava",
   street: "Adlsteiner Str. 9A",
   postalCode: "84494",
   city: "Neumarkt-Sankt Veit",
