@@ -111,7 +111,20 @@ export default function DatenschutzPage() {
                 Diese Website verwendet derzeit keine Tracking- oder
                 Marketing-Cookies und kein Webanalyse-Tool. Technisch notwendige
                 Funktionen können ohne gesonderte Einwilligung bereitgestellt
-                werden.
+                werden. Ihre Cookie-Auswahl wird lokal im Browser gespeichert,
+                damit die Abfrage nicht bei jedem Seitenaufruf erneut erscheint.
+              </p>
+              <p>
+                Externe Medien, insbesondere Google Maps, werden nicht
+                automatisch geladen. Sie können diese Inhalte aktiv freigeben
+                und Ihre Entscheidung jederzeit über die{" "}
+                <a
+                  className="font-semibold text-ember underline-offset-4 hover:underline"
+                  href="#cookie-einstellungen"
+                >
+                  Cookie-Einstellungen
+                </a>{" "}
+                anpassen.
               </p>
             </LegalBlock>
 

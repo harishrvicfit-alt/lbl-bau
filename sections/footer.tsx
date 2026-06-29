@@ -3,12 +3,15 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+import { openCookieSettings } from "@/components/cookie-consent";
 import { company, fullAddress } from "@/lib/company";
 import { navItems } from "@/lib/data";
 import { localize, useLanguage } from "@/lib/i18n";
 
 export function Footer() {
   const { language, text } = useLanguage();
+  const cookieSettingsLabel =
+    language === "hr" ? "Postavke kolačića" : "Cookie-Einstellungen";
   const footerNavItems = navItems.map((item) => ({
     ...item,
     href: item.href.startsWith("#") ? `/${item.href}` : item.href,
@@ -86,6 +89,13 @@ export function Footer() {
               >
                 Datenschutz
               </a>
+              <button
+                type="button"
+                onClick={openCookieSettings}
+                className="block text-left text-sm text-white/60 hover:text-sand-300"
+              >
+                {cookieSettingsLabel}
+              </button>
             </div>
           </div>
 
@@ -124,6 +134,13 @@ export function Footer() {
             <a href="/datenschutz" className="transition hover:text-white">
               Datenschutz
             </a>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="transition hover:text-white"
+            >
+              {cookieSettingsLabel}
+            </button>
             <a href={`mailto:${company.email}`} className="transition hover:text-white">
               Kontakt
             </a>

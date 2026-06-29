@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { company } from "@/lib/company";
 import { LanguageProvider } from "@/lib/i18n";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const siteUrl = company.website;
 
@@ -83,7 +84,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="de">
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <CookieConsent />
+        </LanguageProvider>
       </body>
     </html>
   );
