@@ -113,8 +113,9 @@ export const projects = [
       de: "Unterstützende Bauarbeiten vor Ort",
       hr: "Podrška pri građevinskim radovima",
     },
-    image: "/images/projects/doppelhaus-geruest-aussenansicht.webp",
+    image: "/images/projects/doppelhaus-neubau-baufortschritt.webp",
     gallery: [
+      "/images/projects/doppelhaus-neubau-baufortschritt.webp",
       "/images/projects/doppelhaus-geruest-aussenansicht.webp",
       "/images/projects/doppelhaus-bauphase-aussen-mauerwerk.webp",
       "/images/projects/doppelhaus-deckenbewehrung-uebersicht.webp",
@@ -123,7 +124,6 @@ export const projects = [
       "/images/projects/doppelhaus-neubau-innenausbau.webp",
       "/images/projects/doppelhaus-neubau-raumaufteilung.webp",
       "/images/projects/doppelhaus-neubau-treppenhaus.webp",
-      "/images/projects/doppelhaus-neubau-baufortschritt.webp",
       "/images/projects/doppelhaus-neubau-aussenansicht.webp",
       "/images/projects/doppelhaus-neubau-mauerwerk.webp",
     ],
