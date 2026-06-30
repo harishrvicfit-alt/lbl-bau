@@ -5,7 +5,7 @@ LBL Bau is a regional construction and renovation company based in Neumarkt-Sank
 Website: https://www.lblbau.de
 Phone: 0173 4593296
 Email: info@lbl-bau.de
-Address: Adlsteiner Str. 9A, 84494 Neumarkt-Sankt Veit, Germany
+Address: Adlsteiner Straße 9A, 84494 Neumarkt-Sankt Veit, Germany
 
 Core services:
 - Renovierungsservice
