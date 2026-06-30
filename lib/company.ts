@@ -15,7 +15,7 @@ export const company = {
   email: "info@lbl-bau.de",
   website: "https://www.lblbau.de",
   officeHours: "Termine nach Vereinbarung",
-  mapQuery: "LBL Bau, Adlsteiner Straße 9A, 84494 Neumarkt-Sankt Veit, Deutschland",
+  mapQuery: "Adlsteiner Straße 9A, 84494 Neumarkt-Sankt Veit, Deutschland",
 };
 
 export const fullAddress = `${company.street}, ${company.postalCode} ${company.city}`;
