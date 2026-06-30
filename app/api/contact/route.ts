@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 
 import { company } from "@/lib/company";
 
-const recipientEmail = process.env.CONTACT_TO_EMAIL ?? company.email;
+// Temporary fallback for launch testing. Set CONTACT_TO_EMAIL=info@lbl-bau.de after approval.
+const recipientEmail = process.env.CONTACT_TO_EMAIL ?? "haris.hrvic@sl-rack.de";
 const senderEmail =
   process.env.CONTACT_FROM_EMAIL ?? "LBL Bau Website <onboarding@resend.dev>";
 
