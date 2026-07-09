@@ -88,7 +88,7 @@ export default function ImpressumPage() {
 
             <LegalBlock title="Verantwortlich für den Inhalt">
               <p>
-                Verantwortlich für die Inhalte dieser Website ist {company.owner}
+                Verantwortlich für die Inhalte dieser Website ist {company.owner}{" "}
                 unter der oben genannten Anschrift.
               </p>
             </LegalBlock>
