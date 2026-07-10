@@ -66,6 +66,9 @@ export function Footer() {
             <p className="mt-6 max-w-md leading-7 text-white/60">
               {text.footer.intro}
             </p>
+            <p className="mt-4 max-w-md text-xs leading-6 text-white/45">
+              {text.footer.legalNote}
+            </p>
           </div>
 
           <div>

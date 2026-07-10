@@ -40,7 +40,7 @@ export default function Home() {
         "Bayern",
       ],
       description:
-        "Regionaler Baupartner für Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten in Neumarkt-Sankt Veit, Waldkraiburg und Mühldorf am Inn.",
+        "Regionaler Baupartner für Renovierungsservice, Bauunterstützung, unterstützende Trockenbauarbeiten und Ausbauunterstützung im Rahmen von Partnerprojekten in Neumarkt-Sankt Veit, Waldkraiburg und Mühldorf am Inn.",
       founder: company.owner,
       telephone: company.phoneHref,
       email: company.email,
@@ -60,10 +60,10 @@ export default function Home() {
         "@type": "OfferCatalog",
         name: "Leistungsbereiche",
         itemListElement: [
-          "Trockenbau",
-          "Innenausbau",
+          "Trockenbau-Unterstützung",
+          "Ausbauunterstützung",
           "Renovierungsservice",
-          "Montage und Finish",
+          "Ergänzende Montagearbeiten",
           "Fassadenbegleitung",
           "Außenbereich-Unterstützung",
           "Neubau-Projektunterstützung",

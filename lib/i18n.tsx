@@ -25,7 +25,7 @@ export const copy = {
   de: {
     langLabel: "Deutsch",
     loading: "Qualität wird geladen",
-    headerTagline: "Ausbau & Renovierung",
+    headerTagline: "Bauunterstützung & Renovierung",
     cta: {
       request: "Angebot anfragen",
       call: "Jetzt anrufen",
@@ -37,7 +37,7 @@ export const copy = {
       badge: "Premium Baupartner: LBL Bau",
       headline: "LBL Bau. Modern. Präzise. Zuverlässig.",
       intro:
-        "Hochwertiger Renovierungsservice, Trockenbau, Innenausbau und unterstützende Bauarbeiten bei Partnerprojekten mit sauberer Planung und präziser Ausführung.",
+        "Hochwertiger Renovierungsservice, Projektunterstützung und unterstützende Ausbauarbeiten im Rahmen abgestimmter Partnerprojekte mit sauberer Planung und präziser Mitwirkung.",
       primary: "Angebot anfragen",
       secondary: "Projekte ansehen",
       consulting: "Beratung",
@@ -45,21 +45,21 @@ export const copy = {
     },
     services: {
       eyebrow: "Leistungen",
-      title: "Saubere Ausbauleistungen und verlässliche Unterstützung bei Bauprojekten.",
+      title: "Saubere Ausbauunterstützung und verlässliche Mitwirkung bei Bauprojekten.",
       ariaSuffix: "anfragen",
     },
     about: {
       eyebrow: "Über uns",
       title: "Lokal verwurzelt, sorgfältig geplant und hochwertig umgesetzt.",
       intro:
-        "LBL Bau ist eine kleinere, flexible Baufirma aus Bayern. Unser Anspruch ist nicht Masse, sondern saubere Arbeit, ehrliche Kommunikation und ein Ergebnis, das auch nach Jahren überzeugt.",
-      quote: "„Wir bauen so, dass Vertrauen sichtbar wird.“",
+        "LBL Bau ist ein kleinerer, flexibler Baudienstleister und Baupartner aus Bayern. Unser Anspruch ist nicht Masse, sondern saubere Arbeit, ehrliche Kommunikation und ein Ergebnis, das auch nach Jahren überzeugt.",
+      quote: "„Wir unterstützen Projekte so, dass Qualität und Vertrauen sichtbar werden.“",
       signature: "Geschäftsführung",
       timeline: [
         "Persönliche Beratung und klare Projektplanung",
         "Saubere Abstimmung mit Kunden, Partnern und Fachbetrieben",
-        "Präzise Ausführung im vereinbarten Leistungsbereich",
-        "Verlässliche Übergabe mit sauberem Finish",
+        "Präzise Mitwirkung im vereinbarten Leistungsbereich",
+        "Saubere Abschlussarbeiten nach Abstimmung mit dem verantwortlichen Fachbetrieb",
       ],
     },
     projects: {
@@ -80,9 +80,9 @@ export const copy = {
     },
     serviceArea: {
       eyebrow: "Regional vor Ort",
-      title: "Ausbau, Renovierung und Bauunterstützung in Neumarkt-Sankt Veit, Waldkraiburg und Umgebung.",
+      title: "Renovierungsservice, Ausbauunterstützung und Bauunterstützung in Neumarkt-Sankt Veit, Waldkraiburg und Umgebung.",
       intro:
-        "LBL Bau unterstützt private und gewerbliche Kunden in der Region mit Renovierungsservice, Trockenbau, Innenausbau sowie vorbereitenden und unterstützenden Arbeiten bei Bauprojekten. Bei spezialisierten Fachgewerken erfolgt die Umsetzung im passenden Rahmen mit verantwortlichen Fachbetrieben und Projektpartnern.",
+        "LBL Bau unterstützt private und gewerbliche Kunden in der Region mit Renovierungsservice, unterstützenden Trockenbauarbeiten, Ausbauunterstützung sowie vorbereitenden und ergänzenden Arbeiten bei Bauprojekten. Bei zulassungspflichtigen oder spezialisierten Fachgewerken erfolgt die Ausführung ausschließlich in Zusammenarbeit mit verantwortlichen Fachbetrieben bzw. im Rahmen entsprechender Partnerprojekte.",
       call: "Direkt anrufen",
       location: "Standort",
       areas: ["Neumarkt-Sankt Veit", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Landkreis Mühldorf"],
@@ -95,7 +95,7 @@ export const copy = {
     finalCta: {
       eyebrow: "Nächstes Projekt",
       title:
-        "Starten Sie Ihr nächstes Bauprojekt mit einem Team, das sauber denkt und präzise arbeitet.",
+        "Starten Sie Ihr nächstes Bauprojekt mit einem Partner, der sauber mitdenkt und präzise unterstützt.",
       primary: "Projekt besprechen",
       call: "Jetzt anrufen",
     },
@@ -110,7 +110,7 @@ export const copy = {
       name: "Name",
       contactMethod: "Telefon oder E-Mail",
       projectType: "Projektart",
-      projectPlaceholder: "Trockenbau, Renovierung, Bauunterstützung ...",
+      projectPlaceholder: "Trockenbau-Unterstützung, Renovierung, Bauunterstützung ...",
       message: "Nachricht",
       sending: "Wird gesendet ...",
       submit: "Anfrage senden",
@@ -122,9 +122,11 @@ export const copy = {
       route: "Route extern öffnen",
     },
     footer: {
-      tagline: "Premium Ausbau & Renovierung",
+      tagline: "Premium Bauunterstützung & Renovierung",
       intro:
-        "Moderne Ausbauleistungen, Renovierungsservice und verlässliche Unterstützung für private und gewerbliche Projekte in Bayern.",
+        "Moderne Ausbauunterstützung, Renovierungsservice und verlässliche Projektunterstützung für private und gewerbliche Projekte in Bayern.",
+      legalNote:
+        "Bei zulassungspflichtigen Gewerken erfolgt die Ausführung ausschließlich in Zusammenarbeit mit verantwortlichen Fachbetrieben bzw. im Rahmen entsprechender Partnerprojekte.",
       quickLinks: "Quick Links",
       contact: "Kontakt",
       call: "Anrufen",
@@ -136,7 +138,7 @@ export const copy = {
   hr: {
     langLabel: "Hrvatski",
     loading: "Kvaliteta se učitava",
-    headerTagline: "Unutarnji radovi i renoviranje",
+    headerTagline: "Građevinska podrška i renoviranje",
     cta: {
       request: "Zatraži ponudu",
       call: "Nazovi sada",
@@ -148,7 +150,7 @@ export const copy = {
       badge: "Premium građevinski partner: LBL Bau",
       headline: "LBL Bau. Moderno. Precizno. Pouzdano.",
       intro:
-        "Kvalitetan renovacijski servis, suha gradnja, unutarnji radovi i podrška na partnerskim građevinskim projektima uz uredno planiranje i preciznu izvedbu.",
+        "Kvalitetan renovacijski servis, projektna podrška i pomoćni unutarnji radovi u okviru dogovorenih partnerskih projekata uz uredno planiranje i preciznu suradnju.",
       primary: "Zatraži ponudu",
       secondary: "Pogledaj projekte",
       consulting: "Savjetovanje",
@@ -156,21 +158,21 @@ export const copy = {
     },
     services: {
       eyebrow: "Usluge",
-      title: "Uredni unutarnji radovi i pouzdana podrška na građevinskim projektima.",
+      title: "Uredna podrška kod unutarnjih radova i pouzdana suradnja na građevinskim projektima.",
       ariaSuffix: "zatraži",
     },
     about: {
       eyebrow: "O nama",
       title: "Lokalno prisutni, pažljivo planirani i kvalitetno izvedeni radovi.",
       intro:
-        "LBL Bau je manja i fleksibilna građevinska firma iz Bavarske. Naš cilj nije masovnost, nego uredan rad, iskrena komunikacija i rezultat koji uvjerava i nakon mnogo godina.",
-      quote: "„Gradimo tako da se povjerenje vidi u svakom detalju.“",
+        "LBL Bau je manji i fleksibilan građevinski partner iz Bavarske. Naš cilj nije masovnost, nego uredan rad, iskrena komunikacija i rezultat koji uvjerava i nakon mnogo godina.",
+      quote: "„Podržavamo projekte tako da se kvaliteta i povjerenje vide u svakom detalju.“",
       signature: "Vodstvo firme",
       timeline: [
         "Osobno savjetovanje i jasno planiranje projekta",
         "Uredan dogovor s klijentima, partnerima i stručnim izvođačima",
-        "Precizna izvedba u dogovorenom području rada",
-        "Pouzdana predaja s čistim završetkom",
+        "Precizna suradnja u dogovorenom području rada",
+        "Uredni završni radovi prema dogovoru s odgovornim stručnim izvođačem",
       ],
     },
     projects: {
@@ -191,9 +193,9 @@ export const copy = {
     },
     serviceArea: {
       eyebrow: "Regionalno na terenu",
-      title: "Unutarnji radovi, renoviranje i građevinska podrška u Neumarkt-Sankt Veitu, Waldkraiburgu i okolini.",
+      title: "Renovacijski servis, podrška kod unutarnjih radova i građevinska podrška u Neumarkt-Sankt Veitu, Waldkraiburgu i okolini.",
       intro:
-        "LBL Bau podržava privatne i poslovne klijente u regiji kroz renovacijski servis, suhu gradnju, unutarnje radove te pripremne i pomoćne radove na građevinskim projektima. Kod specijaliziranih stručnih radova radimo u odgovarajućem okviru s partnerskim firmama.",
+        "LBL Bau podržava privatne i poslovne klijente u regiji kroz renovacijski servis, pomoćne radove suhe gradnje, podršku kod unutarnjih radova te pripremne i dodatne radove na građevinskim projektima. Kod radova koji zahtijevaju ovlaštene stručne izvođače izvedba se odvija isključivo u suradnji s odgovornim Fachbetrieb partnerima odnosno u okviru partnerskih projekata.",
       call: "Direktno nazovi",
       location: "Lokacija",
       areas: ["Neumarkt-Sankt Veit", "Waldkraiburg", "Mühldorf am Inn", "Ampfing", "Kraiburg am Inn", "Okrug Mühldorf"],
@@ -205,7 +207,7 @@ export const copy = {
     },
     finalCta: {
       eyebrow: "Sljedeći projekt",
-      title: "Pokrenite svoj sljedeći građevinski projekt s timom koji razmišlja čisto i radi precizno.",
+      title: "Pokrenite svoj sljedeći građevinski projekt s partnerom koji jasno razmišlja i precizno podržava izvedbu.",
       primary: "Razgovarajmo o projektu",
       call: "Nazovi sada",
     },
@@ -220,7 +222,7 @@ export const copy = {
       name: "Ime",
       contactMethod: "Telefon ili e-mail",
       projectType: "Vrsta projekta",
-      projectPlaceholder: "Suha gradnja, renoviranje, građevinska podrška ...",
+      projectPlaceholder: "Podrška kod suhe gradnje, renoviranje, građevinska podrška ...",
       message: "Poruka",
       sending: "Šalje se ...",
       submit: "Pošalji upit",
@@ -232,9 +234,11 @@ export const copy = {
       route: "Otvori rutu izvana",
     },
     footer: {
-      tagline: "Premium unutarnji radovi i renoviranje",
+      tagline: "Premium građevinska podrška i renoviranje",
       intro:
-        "Moderni unutarnji radovi, renovacijski servis i pouzdana podrška za privatne i poslovne projekte u Bavarskoj.",
+        "Moderna podrška kod unutarnjih radova, renovacijski servis i pouzdana projektna podrška za privatne i poslovne projekte u Bavarskoj.",
+      legalNote:
+        "Kod radova koji zahtijevaju ovlaštene stručne izvođače izvedba se odvija isključivo u suradnji s odgovornim Fachbetrieb partnerima odnosno u okviru odgovarajućih partnerskih projekata.",
       quickLinks: "Brzi linkovi",
       contact: "Kontakt",
       call: "Nazovi",

@@ -23,7 +23,7 @@ export function HeroSection() {
       <motion.div className="absolute inset-0" style={{ y, opacity }}>
         <Image
           src="/images/hero-modern-renovation.jpg"
-          alt="LBL Bau Renovierung und Innenausbau"
+          alt="LBL Bau Renovierungsservice und Ausbauunterstützung"
           fill
           priority
           className="object-cover"

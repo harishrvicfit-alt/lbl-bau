@@ -52,18 +52,18 @@ export const services = [
     icon: Hammer,
   },
   {
-    title: { de: "Trockenbau & Ausbau", hr: "Suha gradnja i unutarnji radovi" },
+    title: { de: "Trockenbau-Unterstützung", hr: "Podrška kod suhe gradnje" },
     description: {
-      de: "Leichte Trennwände, Decken, Verkleidungen und saubere Ausbauarbeiten im Innenbereich.",
-      hr: "Lagani pregradni zidovi, stropovi, obloge i uredni unutarnji radovi.",
+      de: "Unterstützende Trockenbauarbeiten, Montage nichttragender Trennwände und Zuarbeit im Rahmen von Partnerprojekten.",
+      hr: "Pomoćni radovi suhe gradnje, montaža nenosivih pregradnih zidova i podrška u okviru partnerskih projekata.",
     },
     icon: Layers3,
   },
   {
     title: { de: "Montage & Finish", hr: "Montaža i završni radovi" },
     description: {
-      de: "Montage genormter Bauteile, saubere Anschlussdetails und ergänzende Arbeiten bis zur Übergabe.",
-      hr: "Montaža standardiziranih građevinskih elemenata, uredni spojevi i završni detalji do predaje.",
+      de: "Ergänzende Montagearbeiten, saubere Anschlussdetails und unterstützende Abschlussarbeiten im vereinbarten Leistungsumfang.",
+      hr: "Dodatni montažni radovi, uredni spojevi i pomoćni završni radovi u dogovorenom opsegu.",
     },
     icon: Ruler,
   },
@@ -135,11 +135,11 @@ export const projects = [
   {
     title: { de: "Wohnhaus-Renovierung", hr: "Renoviranje kuće" },
     category: { de: "Projektbereich", hr: "Područje rada" },
-    location: { de: "Innenausbau & Modernisierung", hr: "Unutarnji radovi i modernizacija" },
+    location: { de: "Ausbauunterstützung & Modernisierung", hr: "Podrška kod unutarnjih radova i modernizacije" },
     image: "/images/project-house-renovation.jpg",
     description: {
-      de: "Beispielhafter Leistungsbereich für Renovierungs- und Ausbauarbeiten: Vorbereitung, Montage, Details und sauberes Finish. Spezialisierte Fachgewerke werden bei Bedarf mit verantwortlichen Partnern abgestimmt.",
-      hr: "Primjer područja rada za renovacijske i unutarnje radove: priprema, montaža, detalji i uredan završetak. Specijalizirani stručni radovi po potrebi se usklađuju s odgovornim partnerima.",
+      de: "Beispielhafter Leistungsbereich für Renovierungsservice und Ausbauunterstützung: Vorbereitung, Montage, Details und sauberes Finish im vereinbarten Umfang. Spezialisierte Fachgewerke werden mit verantwortlichen Fachbetrieben abgestimmt.",
+      hr: "Primjer područja rada za renovacijski servis i podršku kod unutarnjih radova: priprema, montaža, detalji i uredan završetak u dogovorenom opsegu. Specijalizirani stručni radovi usklađuju se s odgovornim stručnim izvođačima.",
     },
   },
   {
@@ -153,13 +153,13 @@ export const projects = [
     },
   },
   {
-    title: { de: "Innenausbau Wohnbereich", hr: "Unutarnji radovi u stambenom prostoru" },
+    title: { de: "Ausbauunterstützung Wohnbereich", hr: "Podrška kod unutarnjih radova u stambenom prostoru" },
     category: { de: "Projektbereich", hr: "Područje rada" },
-    location: { de: "Trockenbau & Innenarbeiten", hr: "Suha gradnja i unutarnji radovi" },
+    location: { de: "Trockenbau- und Innenarbeiten als Unterstützung", hr: "Podrška kod suhe gradnje i unutarnjih radova" },
     image: "/images/project-interior-work.jpg",
     description: {
-      de: "Leistungsbereich für Innenausbau mit Trockenbau, Montagearbeiten, Wand- und Deckenverkleidungen sowie sauberem Finish.",
-      hr: "Područje rada za unutarnje radove sa suhom gradnjom, montažom, zidnim i stropnim oblogama te urednim završetkom.",
+      de: "Leistungsbereich für Ausbauunterstützung mit unterstützenden Trockenbauarbeiten, Montage, Wand- und Deckenverkleidungen sowie sauberem Finish in Abstimmung mit Fachbetrieben.",
+      hr: "Područje rada za podršku kod unutarnjih radova s pomoćnim radovima suhe gradnje, montažom, zidnim i stropnim oblogama te urednim završetkom u dogovoru sa stručnim izvođačima.",
     },
   },
   {
