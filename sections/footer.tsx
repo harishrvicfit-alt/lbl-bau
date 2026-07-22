@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 import { openCookieSettings } from "@/components/cookie-consent";
 import { company, fullAddress } from "@/lib/company";
@@ -37,6 +37,13 @@ export function Footer() {
       label: text.footer.route,
       aria: text.footer.routeAria,
       icon: MapPin,
+      external: true,
+    },
+    {
+      href: company.instagram,
+      label: "Instagram",
+      aria: text.footer.instagramAria,
+      icon: Instagram,
       external: true,
     },
   ];

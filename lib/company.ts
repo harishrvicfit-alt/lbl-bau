@@ -13,6 +13,7 @@ export const company = {
   phoneDisplay: "0173 4593296",
   phoneHref: "+491734593296",
   email: "info@lbl-bau.de",
+  instagram: "https://www.instagram.com/lbl.bau1/",
   website: "https://www.lblbau.de",
   officeHours: "Termine nach Vereinbarung",
   mapQuery: "Adlsteiner Straße 9A, 84494 Neumarkt-Sankt Veit, Deutschland",
