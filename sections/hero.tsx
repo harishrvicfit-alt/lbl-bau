@@ -22,10 +22,11 @@ export function HeroSection() {
     >
       <motion.div className="absolute inset-0" style={{ y, opacity }}>
         <Image
-          src="/images/hero-modern-renovation.jpg"
-          alt="LBL Bau Renovierungsservice und Ausbauunterstützung"
+          src="/images/project-house-renovation.jpg"
+          alt=""
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
       </motion.div>
@@ -127,8 +128,8 @@ export function HeroSection() {
         >
           <div className="image-mask relative aspect-[0.86] max-h-[520px] overflow-hidden rounded-[8px] border border-white/12 bg-white/10 shadow-premium backdrop-blur">
             <Image
-              src="/images/hero-detail-work.jpg"
-              alt="Detailarbeit bei moderner Renovierung"
+              src="/images/projects/doppelhaus-neubau-treppenhaus.webp"
+              alt="Betontreppe und Ziegelwände im Rohbau eines Partnerprojekts"
               fill
               className="object-cover transition duration-700 hover:scale-105"
               sizes="(min-width: 1024px) 42vw, 100vw"

@@ -117,7 +117,6 @@ export const projects = [
     gallery: [
       "/images/projects/doppelhaus-neubau-baufortschritt.webp",
       "/images/projects/doppelhaus-geruest-aussenansicht.webp",
-      "/images/projects/doppelhaus-bauphase-aussen-mauerwerk.webp",
       "/images/projects/doppelhaus-deckenbewehrung-uebersicht.webp",
       "/images/projects/doppelhaus-dachvorbereitung-abend.webp",
       "/images/projects/doppelhaus-dachflaeche-detail.webp",
@@ -156,7 +155,7 @@ export const projects = [
     title: { de: "Ausbauunterstützung Wohnbereich", hr: "Podrška kod unutarnjih radova u stambenom prostoru" },
     category: { de: "Projektbereich", hr: "Područje rada" },
     location: { de: "Trockenbau- und Innenarbeiten als Unterstützung", hr: "Podrška kod suhe gradnje i unutarnjih radova" },
-    image: "/images/project-interior-work.jpg",
+    image: "/images/projects/doppelhaus-neubau-innenausbau.webp",
     description: {
       de: "Leistungsbereich für Ausbauunterstützung mit unterstützenden Trockenbauarbeiten, Montage, Wand- und Deckenverkleidungen sowie sauberem Finish in Abstimmung mit Fachbetrieben.",
       hr: "Područje rada za podršku kod unutarnjih radova s pomoćnim radovima suhe gradnje, montažom, zidnim i stropnim oblogama te urednim završetkom u dogovoru sa stručnim izvođačima.",
